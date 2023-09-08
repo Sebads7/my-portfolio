@@ -1,3 +1,7 @@
+
+
+
+
 const sticky = () => {
 
     const navbar = document.getElementById("main-nav");
@@ -14,44 +18,6 @@ const sticky = () => {
 };
 
 
-
-// var setWaypoints = function() {
-
-//     // white background
-//     $('.waypoint__white').waypoint(function(direction) {
-//         if (direction == 'down') {
-//             $('.brand').addClass('now--black');
-//             $('.nav-link.white').addClass('now--black');
-//             $('.nav-menu.v2').addClass('is--white');
-//             $('.hamburger-line.white').addClass('is--black');
-//         } else {
-//             $('.brand').removeClass('now--black');
-//             $('.nav-link.white').removeClass('now--black');
-//             $('.nav-menu.v2').removeClass('is--white');
-//             $('.hamburger-line.white').removeClass('is--black');
-//         }
-//     }, {
-//         offset: '60px'
-//     });
-
-//     // black background
-//     $('.waypoint__black').waypoint(function(direction) {
-//         if (direction == 'down') {
-//             $('.brand').removeClass('now--black');
-//             $('.nav-link.white').removeClass('now--black');
-//             $('.nav-menu.v2').removeClass('is--white');
-//             $('.hamburger-line.white').removeClass('is--black');
-//         } else {
-//             $('.brand').addClass('now--black');
-//             $('.nav-link.white').addClass('now--black');
-//             $('.nav-menu.v2').addClass('is--white');
-//             $('.hamburger-line.white').addClass('is--black');
-//         }
-//     }, {
-//         offset: '60px'
-//     });
-
-// };
 
 
 const navSlide = () => {
