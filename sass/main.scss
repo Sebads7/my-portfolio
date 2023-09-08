@@ -1,0 +1,17 @@
+@import "base/base";
+@import "layouts/layout";
+@import "components/components";
+@import "components/icons";
+@import "layouts/header";
+@import "abstracts/mixins";
+
+
+
+
+//pages
+
+@import "pages/home";
+@import "pages/projects";
+@import "pages/resume";
+@import "pages/blog";
+@import "pages/contact";

@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////
+///  COLORS
+
+
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-dark: #BA265D;
+}
+
+//COLORS OF THE WEBSITE
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+
+    font-family: "Open Sans", -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI", Roboto,
+        "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    background-color: #fff;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+    font-size: 30px;
+}

@@ -1,0 +1,21 @@
+
+
+@keyframes slideIn {
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-Back-In{
+    
+
+    0%, 5%, 95%, 100% { 
+        bottom: 0;
+        transform: translate(0, 0);
+    }
+    45%, 55% {
+        bottom: 100%;
+        transform: translate(0, -100%);
+    }
+  }

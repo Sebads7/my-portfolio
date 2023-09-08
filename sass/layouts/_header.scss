@@ -1,0 +1,86 @@
+
+//FIRST GRAY NAV-BAR
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 0.7rem 0;
+    width: 100%;
+
+    z-index: 99999999999999;
+    position: relative;
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 3rem;
+        padding: 0 10rem;
+
+        @media only screen and (max-width: 1200px) {
+            padding: 0 5rem;
+        }
+    }
+
+    &__row-left,
+    &__row-right {
+        display: flex;
+        gap: 3rem;
+    }
+}
+
+
+//SECOND WHITE NAV-BAR
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    position: relative;
+    z-index: 9999999999999999;
+    background-color: #fff;
+
+    width: 100%;
+    height: 8rem;
+
+    box-shadow: rgb(38, 57, 77) 1px 5px 5px -9px;
+
+    &__row-align {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        align-items: center;
+        padding: 0 10rem;
+
+        @media only screen and (max-width: 1200px) {
+            padding: 0 5rem;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    &__nav--list ul, li, a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        gap: 6rem;
+        padding: 6px 0;
+        @media only screen and (max-width: 1200px) {
+            gap: 4rem;
+        }
+    }
+
+}

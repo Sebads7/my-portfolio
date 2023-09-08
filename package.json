@@ -1,0 +1,17 @@
+{
+  "name": "mywebsite-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w "
+  },
+  "author": "Sebastian",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  }
+}
