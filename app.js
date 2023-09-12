@@ -46,3 +46,15 @@ const navSlide = () => {
 
 sticky();
 navSlide();
+
+
+var containerEl = document.querySelector(".portfolio-item");
+// 2. Passing the configuration object inline
+//https://www.kunkalabs.com/mixitup/docs/configuration-object/
+var mixer = mixitup(containerEl, {
+  animation: {
+    effects: "fade translateZ(-100px)",
+    effectsIn: "fade translateY(-100%)",
+    easing: "cubic-bezier(0.645, 0.045, 0.355, 1)"
+  }
+});
