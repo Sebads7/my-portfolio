@@ -5,72 +5,126 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10rem;
-    background-color: white;
+
     width: 100%;
     height: 100%;
-    border-top: 1px dotted #007bff;
+    padding: 0 7rem;
+    
 
-    & h2 {
-        margin-top: 10rem;
+
+    .back-ground {
+        background-color: #326ca9;
+        opacity: 85%;
+        background-size: cover;
+        width: 100%;
+        transform: skew(5deg);
+        box-shadow: rgb(38, 57, 77) 1px 5px 5px -9px;
     }
 
+
     &__row-align {
-        background-color: whitesmoke;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10vmin;
+        padding: 9vmin;
+        padding-bottom: 20rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      
         overflow: hidden;
-        transform: skew(5deg);
 
         .box {
             flex: 1;
-            transition: all 1s ease-in-out;
-            height: 75vmin;
             position: relative;
+            transition: all .5s ease-in-out;
+            height: 75vmin;
+            border: 2px solid rgb(205, 203, 203);
+            padding: .6rem;
 
 
             .box__head {
                 align-items: center;
                 position: absolute;
-                background: #007bff;
+                background: #2b4764;
+                // box-shadow: rgb(118, 147, 177) 1px 5px 5px -9px;
                 white-space: nowrap;
-                padding: 10px 20px;
+
+                padding: 0 20px;
                 transform: rotate(-90deg);
                 transform-origin: 0% 0%;
-                transition: all 0.5s ease-in-out;
+                transition: all 1s ease-in-out;
 
                 & a {
-                    transition: all 0.5s ease-in-out;
-                    text-decoration: none;
-                    align-items: center;
-                    text-align: center;
-                    justify-content: center;
-                    font-size: 1em;
-                    color: white;
-                    bottom: 0;
-                    left: 0;
+                    display: none;
                 }
 
             }
 
             &:hover {
                 flex-grow: 10;
+                transform: skew(-3deg);
+                transition: ease-in-out 0.8s;
+           
 
                 img {
                     filter: grayscale(0);
-                  
+
+
                 }
 
                 .box__head {
-                    background: rgba(0, 0, 0, 0.5);
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, 0);
                     transform: rotate(0deg);
                     width: 100%;
-                    top: calc(100% - 4em);
-                    height: auto;
+                    background: rgba(0, 0, 0, 0.01);
+                    // top: calc(50% - 50%);
                     text-align: center;
+
+
+                    .first-text {
+
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                        opacity: 95%;
+                        background-color: #2b4764;
+
+                        padding: 4rem 26rem;
+                    }
+
+                    .second-text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 1rem 1.2rem;
+
+
+                        & a {
+                            display: flex;
+                            padding: .2rem .5rem;
+                            justify-content: center;
+
+                            width: 33%;
+                            text-decoration: none;
+                            background-color: #286eb9;
+                            transition: ease-in-out 0.3s;
+
+                            border-radius: .4rem;
+                            color: white;
+                        }
+
+                        a:hover {
+                            background-color: #2b4764;
+
+                            transition: ease-in-out 0.3s;
+                            width: 35%;
+                            transform: skew(-2deg);
+                            transform: scale(1.1,1.1);
+                        }
+                    }
                 }
+
+
             }
 
             img {
@@ -79,7 +133,8 @@
                 object-fit: cover;
                 transition: all 1s ease-in-out;
                 filter: grayscale(100%);
-                // transform: skew(-5deg);
+
+                // transform: skew(-10deg);
             }
 
             &:not(:nth-child(5)) {
