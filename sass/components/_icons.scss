@@ -14,4 +14,43 @@
     // &__gitHub{
     //     color: #007bff;
     // }
+
+    &-envelope-paper, &-phone{
+        color: white;
+        width: 12rem;
+        height: 6rem;
+    }
 }
+
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        & svg {
+            color: orange;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+            padding-right: 2rem;
+           
+        }
+
+        .icon-education, .icon-work {
+            width: 2em;
+            height: 2em;
+        }
+
+        .icon-certificate {
+            width: 2.5em;
+            height: 2.5em;
+        }
+
+        .icon-skills {
+            width: 3em;
+            height: 3em;
+            color: #f0f1f6;
+        }
+       
+    }

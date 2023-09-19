@@ -1,14 +1,189 @@
 .third-section {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    padding: 10rem;
-    background-color: white ;
-    width: 100%;
-    height: 100rem;
-   
+    justify-content: center;
 
-    & h2{
-        margin-top: 10rem;
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    margin-top: 20rem;
+
+    font-family: inherit;
+    font-size: inherit;
+
+
+
+    .box-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        width: 85%;
+
+        transition: ease-in-out 0.3s;
+
+        &:hover {
+            width: 100%;
+            transition: ease-in-out 0.3s;
+
+            .skill-section {
+                left: 60%;
+            }
+        }
+    }
+
+    /////////////////////// // TOP BLUE BOX (RESUME) /////////////////////////////
+    .top-section {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        background-color: #326ca9;
+        width: 97%;
+        height: 12rem;
+
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+
+    /////////////////////// // LEFT SECTION (EDUCATION-CERTIFICATIONS) /////////////////////////////
+    .middle-section {
+        margin-top: -10rem;
+        position: relative;
+        background-color: #fefafaa1;
+        width: 90%;
+        height: 100%;
+
+        .box-left {
+            width: 50%;
+            padding: 10rem 3rem 0 3rem;
+
+
+            .left-row {
+                width: 100%;
+            }
+
+
+            & .certification:hover {
+                border-radius: 5px;
+                background-color: #292d73;
+                transition: all ease .4s;
+
+                & p,
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+
+    /////////////////////// // SKILLS SECTION BOX /////////////////////////////
+    .skill-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 7%;
+        left: 55%;
+        z-index: 2;
+        transform: skewY(-2deg);
+        transition: ease-in-out 0.3s;
+
+        font-family: inherit;
+        font-size: inherit;
+
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+        &:hover {
+            transform: skewY(0);
+            transition: ease-in-out 0.3s;
+            left: 50% !important;
+
+            .skill-box {
+                padding: 2rem 5rem;
+
+                .technologies {
+                    margin: 2rem 5rem;
+                    transition: ease-in-out 0.3s;
+                }
+            }
+        }
+
+        .skill-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 6rem 7rem 6rem;
+            background-color: #b2b6c9;
+            height: 100%;
+            border: .7rem solid white;
+
+            .title {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+            }
+        }
+
+        .technologies {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem 3rem;
+            width: 100%;
+            border: .3rem solid white;
+            margin: .6rem 0;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+            &:hover {
+                transform: scale(1.02, 1.02);
+                transition: ease-in-out 0.3s;
+            }
+
+            .box-outside {
+                background-color: whitesmoke;
+                position: relative;
+                width: 100%;
+                height: 1.5rem;
+                margin-bottom: 1rem;
+
+                & span {
+                    border: .1px solid #F0F0F0;
+                    margin: 0;
+                    background-color: #292d73;
+                    position: absolute;
+                    width: 100%;
+                    height: 1.5rem;
+                }
+            }
+
+            .technology-3 {
+                .box-outside {
+                    & span {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    /////////////////////// // BOTTOM BLUE BOX /////////////////////////////
+
+    .final-box {
+        z-index: 1;
+        background-color: #326ca9;
+        width: 97%;
+        padding: 5rem 0;
+
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     }
 }

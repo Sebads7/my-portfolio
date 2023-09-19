@@ -15,6 +15,7 @@
         font-size: 3rem;
         font-weight: 900;
 
+
         @media only screen and (max-width: 1200px) {
             font-size: 2.5rem;
         }
@@ -33,16 +34,23 @@
         // border-right: 2px solid #007bff;
         overflow: hidden;
         animation: animate 2s linear 4.5s;
+
     }
 
     @keyframes animate {
 
         0% {
             width: 0%;
+            box-shadow: rgba(57, 78, 214, 0.8) 5px 0,
+                rgba(58, 71, 153, 0.1) 6px 0;
         }
 
         100% {
             width: 100%;
+            box-shadow: rgba(57, 78, 214, 0.8) 5px 0,
+                rgba(58, 71, 153, 0.1) 6px 0;
+
+
         }
     }
 
@@ -116,10 +124,10 @@
     }
 }
 
-// SECOND SECTION PROJECT//////
+// SECOND-SECTION PROJECTS//////
 
 
-.second-section{
+.second-section {
 
     & h2 {
         display: flex;
@@ -141,8 +149,98 @@
         font-size: 1em;
         transform: skew(-5deg);
     }
+}
+
+// THIRD-SECTION RESUME//////
 
 
+.box-row {
+
+    .top-section {
+        & h2 {
+            color: white;
+        }
+    }
+
+    .left-row {
+
+        .title {
+            width: 90%;
+        }
+
+        .education,
+        .certification,
+        .work-exp, a {
+            display: flex;
+            flex-direction: column;
+            // width: 80%;
+            margin: 5rem 0;
+            text-decoration: none;
+            transition: all ease .2s;
+
+            & p, a {
+                margin: .5rem 0;
+                font-size: 2.4rem;
+                font-weight: 400;
+                color: #292d73;
+                & span {
+                    font-weight: 500;
+                    color: orange;
+                }
+            }
+
+            & p:last-child {
+                color: rgb(64, 62, 62);
+            }
+
+            & h2 {
+                font-size: 3.5rem;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+        }
+    }
+
+    .skill-section {
+        & h3 {
+            display: flex;
+            justify-content: center;
+            width: 40%;
+            font-size: 3.8rem;
+            text-transform: uppercase;
+            color: #0E2954;
+
+        }
+
+        & h4 {
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 300;
+            color: #292d73;
+            text-transform: uppercase;
+            margin-top: .1rem;
+            margin-bottom: 1rem;
+        }
+
+        .technologies {
+            & p {
+                margin: .8rem 0;
+                font-family: inherit;
+                font-size: 2rem;
+                color: white;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+        }
+    }
 
 
+    .last-row {
+        margin-bottom: 7rem;
+
+        & p:last-child {
+            line-height: 5rem;
+        }
+    }
 }

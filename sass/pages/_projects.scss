@@ -5,14 +5,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    position: relative;
     width: 100%;
     height: 100%;
-    padding: 0 7rem;
-    
-
+    padding: 10rem 6rem;
 
     .back-ground {
+        position: relative;
         background-color: #326ca9;
         opacity: 85%;
         background-size: cover;
@@ -21,13 +20,11 @@
         box-shadow: rgb(38, 57, 77) 1px 5px 5px -9px;
     }
 
-
     &__row-align {
+        position: relative;
         display: flex;
         padding: 9vmin;
         padding-bottom: 20rem;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      
         overflow: hidden;
 
         .box {
@@ -37,58 +34,58 @@
             height: 75vmin;
             border: 2px solid rgb(205, 203, 203);
             padding: .6rem;
-
+            
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px,
+            rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
             .box__head {
                 align-items: center;
                 position: absolute;
                 background: #2b4764;
-                // box-shadow: rgb(118, 147, 177) 1px 5px 5px -9px;
                 white-space: nowrap;
 
                 padding: 0 20px;
                 transform: rotate(-90deg);
                 transform-origin: 0% 0%;
-                transition: all 1s ease-in-out;
+                transition: 5px .5s ease;
 
                 & a {
                     display: none;
                 }
-
             }
 
             &:hover {
                 flex-grow: 10;
                 transform: skew(-3deg);
                 transition: ease-in-out 0.8s;
-           
+                position: relative;
 
                 img {
                     filter: grayscale(0);
-
-
+                    position: relative;
                 }
 
                 .box__head {
-                    top: 50%;
                     left: 0;
-                    transform: translate(0, 0);
+                    top: calc(60% - 20%);
                     transform: rotate(0deg);
                     width: 100%;
                     background: rgba(0, 0, 0, 0.01);
-                    // top: calc(50% - 50%);
                     text-align: center;
 
+                    transition: 1px .5s ease-in-out;
 
                     .first-text {
-
                         display: flex;
                         text-align: center;
                         align-items: center;
                         opacity: 95%;
-                        background-color: #2b4764;
-
+                        background-color: #b2b6c9;
                         padding: 4rem 26rem;
+                        transform: skew(-1deg);
                     }
 
                     .second-text {
@@ -97,6 +94,7 @@
                         align-items: center;
                         text-align: center;
                         padding: 1rem 1.2rem;
+                        margin-top: -6px;
 
 
                         & a {
@@ -108,18 +106,16 @@
                             text-decoration: none;
                             background-color: #286eb9;
                             transition: ease-in-out 0.3s;
-
                             border-radius: .4rem;
                             color: white;
                         }
 
                         a:hover {
                             background-color: #2b4764;
-
                             transition: ease-in-out 0.3s;
-                            width: 35%;
+                            width: 40%;
                             transform: skew(-2deg);
-                            transform: scale(1.1,1.1);
+                            transform: scale(1.1, 1.1);
                         }
                     }
                 }
