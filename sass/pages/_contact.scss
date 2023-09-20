@@ -8,6 +8,8 @@
     height: 120rem;
     background-color: #326ca9;
 
+   
+
 
     .row-box {
         display: flex;
@@ -78,6 +80,7 @@
             & form {
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 flex-direction: column;
                 width: 58rem;
                 height: 75rem;
@@ -85,100 +88,54 @@
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-
-                & .column {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+                .error-text-1, .error-text-2, .error-text-3{
+                    display: none;
                     font-family: inherit;
-                    font-size: 1.5rem;
-
-                    & input {
-                        border: .6px solid #345c86;
-                        border-radius: .5rem;
-                        width: 40rem;
-                        height: 5rem;
-                        padding: 2rem;
-                        margin: 3.5rem 0 .1rem 0;
-
-                    }
-
-                    & textarea {
-                        width: 40rem;
-                        padding: 2rem;
-                        resize: none;
-                        border: .6px solid #345c86;
-                        border-radius: .5rem;
-                        font-family: inherit;
-                        margin: 3.5rem 0 .1rem 0;
-                    }
-
-                    .error_message1::after {
-                        font-family: inherit;
-                        font-size: 1.2rem;
-                        display: flex;
-                        flex-direction: row;
-                        content: "Please enter your name";
-                        color: red;
-                        margin-top: .2rem;
-                    }
-
-                    .error_message2::after {
-                        font-family: inherit;
-                        font-size: 1.2rem;
-                        display: flex;
-                        flex-direction: row;
-                        content: "Please enter your email";
-                        color: red;
-                        margin-top: .2rem;
-                    }
-
-                    .error_message3::after {
-                        font-family: inherit;
-                        font-size: 1.2rem;
-                        display: flex;
-                        flex-direction: row;
-                        content: "Please enter your message";
-                        color: red;
-                        margin-top: .2rem;
-                    }
+                    color: red;
+                    font-size: 1.2rem;
+                    align-self: flex-start;
+                    padding-left: 10rem;
+                    margin-bottom: -1rem;
                 }
 
-            
+                & input {
+                    border: .6px solid #345c86;
+                    border-radius: .5rem;
+                    width: 40rem;
+                    height: 5rem;
+                    padding: 2rem;
+                    margin: 3.5rem 0 .1rem 0;
 
-                & .form-botton {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                 
-
-                    & button {
-                        width: 40rem;
-                        height: 5rem;
-                        background-color: #345c86;
-                        color: white;
-                        border: none;
-                        border-radius: .5rem;
-                        cursor: pointer;
-                        margin: 3rem 0;
-
-                        &:hover {
-                            transform: scale(1.1, 1.1);
-                            transition: ease-in-out 0.3s;
-
-                        }
-
-                    }
-
-                 
                 }
 
-               
+                & textarea {
+                    width: 40rem;
+                    padding: 2rem;
+                    resize: none;
+                    border: .6px solid #345c86;
+                    border-radius: .5rem;
+                    font-family: inherit;
+                    margin: 3.5rem 0 .1rem 0;
+                }
+
+                & button {
+                    width: 40rem;
+                    height: 5rem;
+                    background-color: #345c86;
+                    color: white;
+                    border: none;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    margin: 3rem 0;
+
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        transition: ease-in-out 0.3s;
+
+                    }
+     
+                }
             }
-
-          
         }
     }
 }
