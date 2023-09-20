@@ -2,23 +2,17 @@
     color: #666666;
     padding-right: 1.5rem;
 
-    // &__phone{
-    //     color: #007bff;
-    //     opacity: 70%;
-    // }
-
     &__linkedIn{
         color: #007bff;
     }
 
-    // &__gitHub{
-    //     color: #007bff;
-    // }
 
-    &-envelope-paper, &-phone{
+    &-envelope-paper, &-phone--contact{
         color: white;
         width: 12rem;
         height: 6rem;
+        padding: 0;
+        margin: 0;
     }
 }
 
