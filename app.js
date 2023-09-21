@@ -1,3 +1,7 @@
+
+/////// NAVBAR STICKY /////////////////
+
+
 const sticky = () => {
 
   const navbar = document.getElementById("main-nav");
@@ -13,6 +17,8 @@ const sticky = () => {
   });
 };
 
+
+/////// NAVBAR SLIDE /////////////////
 
 const navSlide = () => {
 
@@ -39,25 +45,35 @@ const navSlide = () => {
 sticky();
 navSlide();
 
+//////////////////// FORM VALIDATION ///////////////////////////////
+
+let nameInp1 = document.getElementById("input1");
+let nameInp2 = document.getElementById("input2");
+let nameInp3 = document.getElementById("input3");
+
+////// FUNCTION TO SET ERROR ON CLICK /////
 
 const setSubmit = () => {
-  const nameInp1 = document.getElementById("input1");
-  const nameInp2 = document.getElementById("input2");
-  const nameInp3 = document.getElementById("input3");
-
-  if (!nameInp1.value) {
+  if (!nameInp1.value && !nameInp2.value && !nameInp3.value) {
     document.querySelector(".error-text-1").style.display = "block";
-  } else {
+    document.querySelector(".error-text-2").style.display = "block";
+    document.querySelector(".error-text-3").style.display = "block";
+  }
+}
+
+////// FUNCTION TO HIDE OR DISPLAY ERROR ON KEYUP /////
+
+const handdleError = () => {
+
+  if (nameInp1.value) {
     document.querySelector(".error-text-1").style.display = "none";
   }
-  if (!nameInp2.value) {
-    document.querySelector(".error-text-2").style.display = "block";
-  } else {
+  if (nameInp2.value) {
     document.querySelector(".error-text-2").style.display = "none";
   }
-  if (!nameInp3.value) {
-    document.querySelector(".error-text-3").style.display = "block";
-  } else {
+  if (nameInp3.value) {
     document.querySelector(".error-text-3").style.display = "none";
   }
 }
+
+//////////////////////////////////

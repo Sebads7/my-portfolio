@@ -22,9 +22,7 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  min-height: 100vh;
-  font-size: 30px; }
+  min-height: 100vh; }
 
 .top-bar a {
   color: var(--color-dark-gray);
@@ -628,7 +626,7 @@ nav a:hover:before {
   justify-content: center;
   width: 100%;
   height: 120rem;
-  background-color: #326ca9; }
+  background-color: var(--color-light-blue); }
   .fifth-section .row-box {
     display: flex;
     flex-direction: row;
@@ -658,7 +656,8 @@ nav a:hover:before {
         flex-direction: row;
         gap: 10rem;
         padding: 5rem 0; }
-        .fifth-section .row-box .left-contact .row-1 .email-row, .fifth-section .row-box .left-contact .row-1 .phone-row {
+        .fifth-section .row-box .left-contact .row-1 .email-row,
+        .fifth-section .row-box .left-contact .row-1 .phone-row {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -673,7 +672,7 @@ nav a:hover:before {
       .fifth-section .row-box .right-row h2 {
         font-size: 3rem;
         font-weight: 300;
-        color: #345c86;
+        color: var(--color-dark-blue);
         line-height: 1rem; }
       .fifth-section .row-box .right-row form {
         display: flex;
@@ -684,29 +683,61 @@ nav a:hover:before {
         height: 75rem;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
-        .fifth-section .row-box .right-row form .error-text-1, .fifth-section .row-box .right-row form .error-text-2, .fifth-section .row-box .right-row form .error-text-3 {
+        .fifth-section .row-box .right-row form .error-text-1,
+        .fifth-section .row-box .right-row form .error-text-2,
+        .fifth-section .row-box .right-row form .error-text-3 {
           display: none;
           font-family: inherit;
           color: red;
           font-size: 1.2rem;
-          align-self: flex-start;
-          padding-left: 10rem;
-          margin-bottom: -1rem; }
+          text-align: left;
+          margin: 1rem 0; }
+        .fifth-section .row-box .right-row form .label, .fifth-section .row-box .right-row form .text-area {
+          pointer-events: none;
+          z-index: 1;
+          position: absolute;
+          font-family: inherit;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-left: 2rem;
+          display: block;
+          transition: all .3s;
+          transform: translateY(-3.5rem);
+          transition: transform 200ms, color 200ms; }
+        .fifth-section .row-box .right-row form .text-area {
+          transform: translateY(-21rem); }
+        .fifth-section .row-box .right-row form ::placeholder {
+          color: transparent; }
         .fifth-section .row-box .right-row form input {
-          border: .6px solid #345c86;
+          position: relative;
+          border: 0.6px solid var(--color-dark-blue);
           border-radius: .5rem;
           width: 40rem;
           height: 5rem;
-          padding: 2rem;
-          margin: 3.5rem 0 .1rem 0; }
+          padding: 2rem; }
+          .fifth-section .row-box .right-row form input:focus ~ .label,
+          .fifth-section .row-box .right-row form input input:not(:placeholder-shown) ~ .label {
+            transform: translateY(-8rem); }
+          .fifth-section .row-box .right-row form input:not(:placeholder-shown) ~ .label {
+            color: var(--color-dark-blue);
+            transform: translateY(-8rem); }
+          .fifth-section .row-box .right-row form input:focus ~ .label {
+            color: orange; }
         .fifth-section .row-box .right-row form textarea {
           width: 40rem;
           padding: 2rem;
           resize: none;
           border: .6px solid #345c86;
           border-radius: .5rem;
-          font-family: inherit;
-          margin: 3.5rem 0 .1rem 0; }
+          font-family: inherit; }
+          .fifth-section .row-box .right-row form textarea:focus ~ .text-area,
+          .fifth-section .row-box .right-row form textarea input:not(:placeholder-shown) ~ .text-area {
+            transform: translateY(-26.3rem); }
+          .fifth-section .row-box .right-row form textarea:not(:placeholder-shown) ~ .text-area {
+            color: var(--color-dark-blue);
+            transform: translateY(-26.3rem); }
+          .fifth-section .row-box .right-row form textarea:focus ~ .text-area {
+            color: orange; }
         .fifth-section .row-box .right-row form button {
           width: 40rem;
           height: 5rem;

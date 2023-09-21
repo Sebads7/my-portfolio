@@ -334,7 +334,7 @@
         </div>
         <div class="row-box">
 
-            <div class="left-contact">
+            <div class="left-contact" >
                 <h2>CONTACT</h2>
                 <p>Let's talk about everything.</p>
                 <div class="row-1">
@@ -366,17 +366,41 @@
                 <form action="https://getform.io/f/c4ca9e8f-3d22-4151-8716-5a36ac3fcbbd" method="POST"
                     accept-charset="UTF-8">
                     <h2>Contact Form</h2>
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" id="input1"
-                        assign(:text_value, nil) required>
-
-                    <p class="error-text-1">Please enter your name</p>
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" id="input2"
-                        assign(:text_value, nil) required>
-                    <p class="error-text-2">Please enter your email</p>
-
-                    <textarea placeholder="Your Message" class="form-control" name="message" rows="10" id="input3"
-                        assign(:text_value, nil) required></textarea>
-                    <p class="error-text-3">Please enter your message</p>
+                    <div>
+                        <input type="text" 
+                        name="name" 
+                        class="form-control" 
+                        placeholder=" #" 
+                        id="input1"
+                        onkeyup="handdleError()"
+                        required 
+                        >
+                        <label for="firstname" class="label">Full Name</label>
+                    <p class="error-text-1  error-message">Please enter your name</p>
+                </div>
+                <div>
+                    <input type="email" 
+                    name="email" 
+                    class="form-control" 
+                    placeholder="# " 
+                    id="input2" 
+                    onkeyup="handdleError()"
+                    required>
+                        <label for="email" class="label">Email Address</label>
+                    <p class="error-text-2  error-text">Please enter your email</p>
+                </div>
+                <div>
+                    <textarea placeholder="# " 
+                    class="form-control" 
+                    name="message" 
+                    rows="10" 
+                    id="input3" 
+                    onkeyup="handdleError()"
+                    required
+                    ></textarea>
+                        <label for="message" class="text-area label">Enter your message</label>
+                    <p class="error-text-3  error-text">Please enter your message</p>
+                </div>
                     <button type="submit" onclick="setSubmit()">Send</button>
                 </form>
             </div>
@@ -392,7 +416,7 @@
         </div>
     </footer>
     <script src="app.js"></script>
-    <script src="back-end.js"></script>
+    
 
 </body>
 

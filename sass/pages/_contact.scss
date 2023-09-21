@@ -6,9 +6,9 @@
 
     width: 100%;
     height: 120rem;
-    background-color: #326ca9;
+    background-color: var(--color-light-blue);
 
-   
+
 
 
     .row-box {
@@ -50,7 +50,8 @@
                 gap: 10rem;
                 padding: 5rem 0;
 
-                & .email-row, .phone-row{
+                & .email-row,
+                .phone-row {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -73,7 +74,7 @@
             & h2 {
                 font-size: 3rem;
                 font-weight: 300;
-                color: #345c86;
+                color: var(--color-dark-blue);
                 line-height: 1rem;
             }
 
@@ -82,30 +83,69 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+
                 width: 58rem;
                 height: 75rem;
                 // padding: 3rem 8rem;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-                .error-text-1, .error-text-2, .error-text-3{
+                .error-text-1,
+                .error-text-2,
+                .error-text-3 {
                     display: none;
                     font-family: inherit;
                     color: red;
                     font-size: 1.2rem;
-                    align-self: flex-start;
-                    padding-left: 10rem;
-                    margin-bottom: -1rem;
+                    text-align: left;
+                    margin: 1rem 0;
+
+                }
+
+                & .label, .text-area{
+                    // color: white;
+                    pointer-events: none;
+                    z-index: 1;
+                    position: absolute;
+                    font-family: inherit;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin-left: 2rem;
+                    display: block;
+                    transition: all .3s;
+                    transform: translateY(-3.5rem);
+                    transition: transform 200ms, color 200ms;
+                }
+
+                .text-area{
+                    transform: translateY(-21rem);
+                }
+
+                & ::placeholder{
+                    color: transparent;
                 }
 
                 & input {
-                    border: .6px solid #345c86;
+                    position: relative;
+                    border: .6px solid var(--color-dark-blue);
                     border-radius: .5rem;
                     width: 40rem;
                     height: 5rem;
                     padding: 2rem;
-                    margin: 3.5rem 0 .1rem 0;
 
+                    &:focus~.label, 
+                    input:not(:placeholder-shown)~.label {
+                        transform: translateY(-8rem);
+                    }
+
+                    &:not(:placeholder-shown)~.label {
+                        color: var(--color-dark-blue);
+                        transform: translateY(-8rem);
+                    }
+
+                    &:focus~.label {
+                        color: orange;
+                    }
                 }
 
                 & textarea {
@@ -115,7 +155,21 @@
                     border: .6px solid #345c86;
                     border-radius: .5rem;
                     font-family: inherit;
-                    margin: 3.5rem 0 .1rem 0;
+
+
+                    &:focus~.text-area, 
+                    input:not(:placeholder-shown)~.text-area {
+                        transform: translateY(-26.3rem);
+                    }
+
+                    &:not(:placeholder-shown)~.text-area {
+                        color: var(--color-dark-blue);
+                        transform: translateY(-26.3rem);
+                    }
+
+                    &:focus~.text-area {
+                        color: orange;
+                    }
                 }
 
                 & button {
@@ -127,13 +181,11 @@
                     border-radius: .5rem;
                     cursor: pointer;
                     margin: 3rem 0;
-
+                    
                     &:hover {
                         transform: scale(1.1, 1.1);
                         transition: ease-in-out 0.3s;
-
                     }
-     
                 }
             }
         }
