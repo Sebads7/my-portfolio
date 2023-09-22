@@ -76,6 +76,7 @@
                 font-weight: 300;
                 color: var(--color-dark-blue);
                 line-height: 1rem;
+                margin-bottom: 6rem;
             }
 
             & form {
@@ -89,8 +90,15 @@
                 // padding: 3rem 8rem;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transition: ease-in-out 0.3s;
 
-                .error-text-1,
+                &:hover {
+                    transform: scale(1.05, 1.08);
+                    transition: ease-in-out 0.3s;
+                }
+
+
+                & .error-text-1,
                 .error-text-2,
                 .error-text-3 {
                     display: none;
@@ -102,7 +110,16 @@
 
                 }
 
-                & .label, .text-area{
+                & .col {
+                    margin: 2rem 0;
+
+                    & .error-text-3 {
+                        margin-top: -.1rem;
+                    }
+                }
+
+                & .label,
+                .text-area {
                     // color: white;
                     pointer-events: none;
                     z-index: 1;
@@ -117,13 +134,15 @@
                     transition: transform 200ms, color 200ms;
                 }
 
-                .text-area{
+                .text-area {
                     transform: translateY(-21rem);
                 }
 
-                & ::placeholder{
+                & ::placeholder {
                     color: transparent;
                 }
+
+
 
                 & input {
                     position: relative;
@@ -133,7 +152,8 @@
                     height: 5rem;
                     padding: 2rem;
 
-                    &:focus~.label, 
+
+                    &:focus~.label,
                     input:not(:placeholder-shown)~.label {
                         transform: translateY(-8rem);
                     }
@@ -157,9 +177,10 @@
                     font-family: inherit;
 
 
-                    &:focus~.text-area, 
+
+                    &:focus~.text-area,
                     input:not(:placeholder-shown)~.text-area {
-                        transform: translateY(-26.3rem);
+                        transform: translateY(-26.5rem);
                     }
 
                     &:not(:placeholder-shown)~.text-area {
@@ -180,8 +201,8 @@
                     border: none;
                     border-radius: .5rem;
                     cursor: pointer;
-                    margin: 3rem 0;
-                    
+                    margin: 1.5rem 0;
+
                     &:hover {
                         transform: scale(1.1, 1.1);
                         transition: ease-in-out 0.3s;

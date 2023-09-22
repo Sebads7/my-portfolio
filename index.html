@@ -59,7 +59,7 @@
                             <li class="nav-links"> <a href="#home" class="active">Home</a></li>
                             <li> <a class="btn draw-border" href="#projects">Projects</a></li>
                             <li> <a href="#resume">Resume</a></li>
-                            <li> <a href="#blog">Blog</a></li>
+                            <!-- <li> <a href="#blog">Blog</a></li> -->
                             <li> <a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
@@ -318,12 +318,12 @@
 
     <!---------------- Blog ----------------->
 
-    <section id="blog" class="fourth-section">
+    <!-- <section id="blog" class="fourth-section"> -->
         <!-- <h2>BLOG</h2> -->
-        <div>
+        <!-- <div>
 
-        </div>
-    </section>
+        </div> -->
+    <!-- </section> -->
 
     <!---------------- Contact ----------------->
 
@@ -362,46 +362,44 @@
                 </div>
             </div>
             <div class="right-row">
-
                 <form action="https://getform.io/f/c4ca9e8f-3d22-4151-8716-5a36ac3fcbbd" method="POST"
                     accept-charset="UTF-8">
                     <h2>Contact Form</h2>
-                    <div>
+                    <div class="col">
                         <input type="text" 
                         name="name" 
                         class="form-control" 
                         placeholder=" #" 
                         id="input1"
-                        onkeyup="handdleError()"
                         required 
                         >
                         <label for="firstname" class="label">Full Name</label>
                     <p class="error-text-1  error-message">Please enter your name</p>
                 </div>
-                <div>
+                <div class="col">
                     <input type="email" 
                     name="email" 
                     class="form-control" 
                     placeholder="# " 
                     id="input2" 
-                    onkeyup="handdleError()"
+
                     required>
                         <label for="email" class="label">Email Address</label>
                     <p class="error-text-2  error-text">Please enter your email</p>
                 </div>
-                <div>
+                <div class="col">
                     <textarea placeholder="# " 
                     class="form-control" 
                     name="message" 
                     rows="10" 
                     id="input3" 
-                    onkeyup="handdleError()"
+                    onkeyup=""
                     required
                     ></textarea>
                         <label for="message" class="text-area label">Enter your message</label>
                     <p class="error-text-3  error-text">Please enter your message</p>
                 </div>
-                    <button type="submit" onclick="setSubmit()">Send</button>
+                    <button type="submit" onclick="handdleError()">Send</button>
                 </form>
             </div>
         </div>

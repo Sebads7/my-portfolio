@@ -20,9 +20,11 @@ html {
 body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #fff;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-size: 30px; }
 
 .top-bar a {
   color: var(--color-dark-gray);
@@ -413,6 +415,7 @@ nav a:hover:before {
       flex: 1;
       position: relative;
       transition: all .5s ease-in-out;
+      width: 90%;
       height: 75vmin;
       border: 2px solid var(--color-light-gray);
       padding: .6rem;
@@ -446,12 +449,16 @@ nav a:hover:before {
           transition: 1px .5s ease-in-out; }
           .second-section__row-align .box:hover .box__head .first-text {
             display: flex;
+            color: white;
             text-align: center;
             align-items: center;
-            opacity: 95%;
-            background-color: var(--color-med-dark-gray);
+            opacity: 96%;
+            background-color: rgba(0, 0, 0, 0.3);
             padding: 4rem 26rem;
-            transform: skew(-1deg); }
+            transform: skew(-1deg);
+            -webkit-text-stroke: .2px black;
+            margin-top: -25rem;
+            margin-bottom: 50rem; }
           .second-section__row-align .box:hover .box__head .second-text {
             display: flex;
             justify-content: center;
@@ -472,7 +479,6 @@ nav a:hover:before {
             .second-section__row-align .box:hover .box__head .second-text a:hover {
               background-color: var(--color-dark-blue);
               transition: ease-in-out 0.3s;
-              width: 40%;
               transform: skew(-2deg);
               transform: scale(1.1, 1.1); }
       .second-section__row-align .box img {
@@ -493,7 +499,8 @@ nav a:hover:before {
   padding: 10rem 0;
   margin-top: 20rem;
   font-family: inherit;
-  font-size: inherit; }
+  font-size: inherit;
+  margin-bottom: 50rem; }
   .third-section .box-row {
     display: flex;
     flex-direction: column;
@@ -673,7 +680,8 @@ nav a:hover:before {
         font-size: 3rem;
         font-weight: 300;
         color: var(--color-dark-blue);
-        line-height: 1rem; }
+        line-height: 1rem;
+        margin-bottom: 6rem; }
       .fifth-section .row-box .right-row form {
         display: flex;
         justify-content: center;
@@ -682,7 +690,11 @@ nav a:hover:before {
         width: 58rem;
         height: 75rem;
         background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: ease-in-out 0.3s; }
+        .fifth-section .row-box .right-row form:hover {
+          transform: scale(1.05, 1.08);
+          transition: ease-in-out 0.3s; }
         .fifth-section .row-box .right-row form .error-text-1,
         .fifth-section .row-box .right-row form .error-text-2,
         .fifth-section .row-box .right-row form .error-text-3 {
@@ -692,7 +704,12 @@ nav a:hover:before {
           font-size: 1.2rem;
           text-align: left;
           margin: 1rem 0; }
-        .fifth-section .row-box .right-row form .label, .fifth-section .row-box .right-row form .text-area {
+        .fifth-section .row-box .right-row form .col {
+          margin: 2rem 0; }
+          .fifth-section .row-box .right-row form .col .error-text-3 {
+            margin-top: -.1rem; }
+        .fifth-section .row-box .right-row form .label,
+        .fifth-section .row-box .right-row form .text-area {
           pointer-events: none;
           z-index: 1;
           position: absolute;
@@ -732,7 +749,7 @@ nav a:hover:before {
           font-family: inherit; }
           .fifth-section .row-box .right-row form textarea:focus ~ .text-area,
           .fifth-section .row-box .right-row form textarea input:not(:placeholder-shown) ~ .text-area {
-            transform: translateY(-26.3rem); }
+            transform: translateY(-26.5rem); }
           .fifth-section .row-box .right-row form textarea:not(:placeholder-shown) ~ .text-area {
             color: var(--color-dark-blue);
             transform: translateY(-26.3rem); }
@@ -746,7 +763,7 @@ nav a:hover:before {
           border: none;
           border-radius: .5rem;
           cursor: pointer;
-          margin: 3rem 0; }
+          margin: 1.5rem 0; }
           .fifth-section .row-box .right-row form button:hover {
             transform: scale(1.1, 1.1);
             transition: ease-in-out 0.3s; }
