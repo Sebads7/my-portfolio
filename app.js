@@ -72,7 +72,7 @@ const handdleError = () => {
     }
   });
   nameInp2.addEventListener("keyup", () => {
-    if (nameInp2.value.legth > 1) {
+    if (nameInp2.value) {
       document.querySelector(".error-text-2").style.display = "none";
     }else{
       document.querySelector(".error-text-2").style.display = "block";
