@@ -17,6 +17,11 @@ html {
 *, *::before, *::after {
   box-sizing: inherit; }
 
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; }
+
 body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #fff;
@@ -92,7 +97,9 @@ body {
   font-weight: 400;
   text-align: center;
   font-size: 2rem;
-  color: #666666; }
+  color: #666666;
+  margin-top: 10rem;
+  margin-bottom: 2rem; }
 
 .first-section__btn a {
   font-weight: 400;
@@ -122,76 +129,72 @@ body {
   font-size: 1em;
   transform: skew(-5deg); }
 
-.box-row .top-section h2 {
-  color: white; }
-
-.box-row .left-row .title {
-  width: 90%; }
-
-.box-row .left-row .education,
-.box-row .left-row .certification,
-.box-row .left-row .work-exp, .box-row .left-row a {
-  display: flex;
-  flex-direction: column;
-  margin: 5rem 0;
-  text-decoration: none;
-  transition: all ease .2s; }
-  .box-row .left-row .education p, .box-row .left-row .education a,
-  .box-row .left-row .certification p,
-  .box-row .left-row .certification a,
-  .box-row .left-row .work-exp p,
-  .box-row .left-row .work-exp a, .box-row .left-row a p, .box-row .left-row a a {
-    margin: .5rem 0;
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: #292d73; }
-    .box-row .left-row .education p span, .box-row .left-row .education a span,
-    .box-row .left-row .certification p span,
-    .box-row .left-row .certification a span,
-    .box-row .left-row .work-exp p span,
-    .box-row .left-row .work-exp a span, .box-row .left-row a p span, .box-row .left-row a a span {
-      font-weight: 500;
-      color: orange; }
-  .box-row .left-row .education p:last-child,
-  .box-row .left-row .certification p:last-child,
-  .box-row .left-row .work-exp p:last-child, .box-row .left-row a p:last-child {
-    color: #403e3e; }
-  .box-row .left-row .education h2,
-  .box-row .left-row .certification h2,
-  .box-row .left-row .work-exp h2, .box-row .left-row a h2 {
+.box-row {
+  font-size: 1.5rem;
+  font-family: inherit; }
+  .box-row .top-section h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: white; }
+  .box-row .left-row .title {
+    width: 90%; }
+  .box-row .left-row h2 {
     font-size: 3.5rem;
     text-transform: uppercase;
-    font-weight: 500; }
-
-.box-row .skill-section h3 {
-  display: flex;
-  justify-content: center;
-  width: 40%;
-  font-size: 3.8rem;
-  text-transform: uppercase;
-  color: #0E2954; }
-
-.box-row .skill-section h4 {
-  text-align: center;
-  font-size: 2.3rem;
-  font-weight: 300;
-  color: #292d73;
-  text-transform: uppercase;
-  margin-top: .1rem;
-  margin-bottom: 1rem; }
-
-.box-row .skill-section .technologies p {
-  margin: .8rem 0;
-  font-family: inherit;
-  font-size: 2rem;
-  color: white;
-  font-weight: 300;
-  text-transform: capitalize; }
-
-.box-row .last-row {
-  margin-bottom: 7rem; }
-  .box-row .last-row p:last-child {
-    line-height: 5rem; }
+    font-weight: 600; }
+  .box-row .left-row .education,
+  .box-row .left-row .certification,
+  .box-row .left-row .work-exp, .box-row .left-row a {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0;
+    text-decoration: none;
+    transition: all ease .2s; }
+    .box-row .left-row .education p, .box-row .left-row .education a,
+    .box-row .left-row .certification p,
+    .box-row .left-row .certification a,
+    .box-row .left-row .work-exp p,
+    .box-row .left-row .work-exp a, .box-row .left-row a p, .box-row .left-row a a {
+      margin: .5rem 0;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: #292d73; }
+      .box-row .left-row .education p span, .box-row .left-row .education a span,
+      .box-row .left-row .certification p span,
+      .box-row .left-row .certification a span,
+      .box-row .left-row .work-exp p span,
+      .box-row .left-row .work-exp a span, .box-row .left-row a p span, .box-row .left-row a a span {
+        font-weight: 500;
+        color: orange; }
+    .box-row .left-row .education p:last-child,
+    .box-row .left-row .certification p:last-child,
+    .box-row .left-row .work-exp p:last-child, .box-row .left-row a p:last-child {
+      color: #403e3e; }
+  .box-row .skill-section h3 {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: #0E2954; }
+  .box-row .skill-section h4 {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: #292d73;
+    text-transform: uppercase;
+    margin-top: .1rem;
+    margin-bottom: 1rem; }
+  .box-row .skill-section .technologies p {
+    margin: .8rem 0;
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 300;
+    text-transform: capitalize; }
+  .box-row .last-row {
+    margin-bottom: 7rem; }
+    .box-row .last-row p:last-child {
+      line-height: 5rem; }
 
 nav a.active {
   display: flex;
@@ -268,16 +271,12 @@ nav a:hover:before {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-    padding-right: 2rem; }
-  .title .icon-education, .title .icon-work {
-    width: 2em;
-    height: 2em; }
-  .title .icon-certificate {
-    width: 2.5em;
-    height: 2.5em; }
+    padding-right: 2rem;
+    width: 5em;
+    height: 5em; }
   .title .icon-skills {
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     color: #f0f1f6; }
 
 .top-bar {
@@ -427,14 +426,13 @@ nav a:hover:before {
         white-space: nowrap;
         padding: 0 20px;
         transform: rotate(-90deg);
-        transform-origin: 0% 0%;
-        transition: 5px .5s ease; }
+        transform-origin: 0% 0%; }
         .second-section__row-align .box .box__head a {
           display: none; }
       .second-section__row-align .box:hover {
         flex-grow: 10;
         transform: skew(-3deg);
-        transition: ease-in-out 0.8s;
+        transition: all ease 0.4s;
         position: relative; }
         .second-section__row-align .box:hover img {
           filter: grayscale(0);
@@ -445,8 +443,7 @@ nav a:hover:before {
           transform: rotate(0deg);
           width: 100%;
           background: rgba(0, 0, 0, 0.01);
-          text-align: center;
-          transition: 1px .5s ease-in-out; }
+          text-align: center; }
           .second-section__row-align .box:hover .box__head .first-text {
             display: flex;
             color: white;
@@ -473,14 +470,14 @@ nav a:hover:before {
               width: 33%;
               text-decoration: none;
               background-color: var(--color-light-blue);
-              transition: ease-in-out 0.3s;
+              transition: all ease 0.3s;
               border-radius: .4rem;
               color: white; }
             .second-section__row-align .box:hover .box__head .second-text a:hover {
               background-color: var(--color-dark-blue);
-              transition: ease-in-out 0.3s;
               transform: skew(-2deg);
-              transform: scale(1.1, 1.1); }
+              transform: scale(1.1, 1.1);
+              transition: all ease 0.3s; }
       .second-section__row-align .box img {
         width: 100%;
         height: 100%;
@@ -498,8 +495,6 @@ nav a:hover:before {
   height: 100%;
   padding: 10rem 0;
   margin-top: 20rem;
-  font-family: inherit;
-  font-size: inherit;
   margin-bottom: 50rem; }
   .third-section .box-row {
     display: flex;
@@ -532,7 +527,7 @@ nav a:hover:before {
     height: 100%; }
     .third-section .middle-section .box-left {
       width: 50%;
-      padding: 10rem 3rem 0 3rem; }
+      padding: 15rem 3rem; }
       .third-section .middle-section .box-left .left-row {
         width: 100%; }
       .third-section .middle-section .box-left .certification:hover {
@@ -633,13 +628,15 @@ nav a:hover:before {
   justify-content: center;
   width: 100%;
   height: 120rem;
-  background-color: var(--color-light-blue); }
+  background-color: var(--color-light-blue);
+  font-size: 1.5rem;
+  font-family: inherit; }
   .fifth-section .row-box {
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 100%;
-    padding: 10rem 2rem; }
+    justify-content: center;
+    width: 100%; }
     .fifth-section .row-box .left-contact {
       color: white;
       display: flex;
@@ -647,8 +644,7 @@ nav a:hover:before {
       align-items: center;
       justify-content: center;
       width: 50%;
-      padding: 0 1rem;
-      line-height: 2rem; }
+      line-height: 7rem; }
       .fifth-section .row-box .left-contact h2 {
         font-size: 4rem;
         font-weight: 600; }
@@ -662,7 +658,7 @@ nav a:hover:before {
         display: flex;
         flex-direction: row;
         gap: 10rem;
-        padding: 5rem 0; }
+        padding: 10rem 0; }
         .fifth-section .row-box .left-contact .row-1 .email-row,
         .fifth-section .row-box .left-contact .row-1 .phone-row {
           display: flex;
@@ -676,25 +672,27 @@ nav a:hover:before {
       justify-content: center;
       width: 50%;
       padding: 1rem 1rem; }
-      .fifth-section .row-box .right-row h2 {
-        font-size: 3rem;
-        font-weight: 300;
-        color: var(--color-dark-blue);
-        line-height: 1rem;
-        margin-bottom: 6rem; }
       .fifth-section .row-box .right-row form {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 58rem;
-        height: 75rem;
+        height: 100%;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        transition: ease-in-out 0.3s; }
+        transition: ease-in-out 0.3s;
+        padding: 5rem 0; }
         .fifth-section .row-box .right-row form:hover {
           transform: scale(1.05, 1.08);
           transition: ease-in-out 0.3s; }
+        .fifth-section .row-box .right-row form h2 {
+          font-size: 3rem;
+          font-weight: 300;
+          color: var(--color-dark-blue);
+          line-height: 1rem;
+          margin-bottom: 6rem;
+          margin-top: 4rem; }
         .fifth-section .row-box .right-row form .error-text-1,
         .fifth-section .row-box .right-row form .error-text-2,
         .fifth-section .row-box .right-row form .error-text-3 {
@@ -706,23 +704,18 @@ nav a:hover:before {
           margin: 1rem 0; }
         .fifth-section .row-box .right-row form .col {
           margin: 2rem 0; }
-          .fifth-section .row-box .right-row form .col .error-text-3 {
-            margin-top: -.1rem; }
         .fifth-section .row-box .right-row form .label,
         .fifth-section .row-box .right-row form .text-area {
           pointer-events: none;
           z-index: 1;
           position: absolute;
-          font-family: inherit;
-          font-size: 1.5rem;
-          font-weight: 500;
           margin-left: 2rem;
           display: block;
           transition: all .3s;
           transform: translateY(-3.5rem);
           transition: transform 200ms, color 200ms; }
         .fifth-section .row-box .right-row form .text-area {
-          transform: translateY(-21rem); }
+          transform: translateY(-22.5rem); }
         .fifth-section .row-box .right-row form ::placeholder {
           color: transparent; }
         .fifth-section .row-box .right-row form input {
@@ -742,17 +735,17 @@ nav a:hover:before {
             color: orange; }
         .fifth-section .row-box .right-row form textarea {
           width: 40rem;
-          padding: 2rem;
+          padding-top: 0;
+          vertical-align: top;
           resize: none;
           border: .6px solid #345c86;
-          border-radius: .5rem;
-          font-family: inherit; }
+          border-radius: .5rem; }
           .fifth-section .row-box .right-row form textarea:focus ~ .text-area,
           .fifth-section .row-box .right-row form textarea input:not(:placeholder-shown) ~ .text-area {
-            transform: translateY(-26.5rem); }
+            transform: translateY(-27.3rem); }
           .fifth-section .row-box .right-row form textarea:not(:placeholder-shown) ~ .text-area {
             color: var(--color-dark-blue);
-            transform: translateY(-26.3rem); }
+            transform: translateY(-27.3rem); }
           .fifth-section .row-box .right-row form textarea:focus ~ .text-area {
             color: orange; }
         .fifth-section .row-box .right-row form button {

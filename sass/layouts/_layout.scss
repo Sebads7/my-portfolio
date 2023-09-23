@@ -102,6 +102,8 @@
         text-align: center;
         font-size: 2rem;
         color: #666666;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
 
     }
 
@@ -153,9 +155,13 @@
 
 
 .box-row {
+    font-size: 1.5rem;
+    font-family: inherit;
 
     .top-section {
         & h2 {
+            font-size: 4rem;
+            font-weight: 600;
             color: white;
         }
     }
@@ -164,6 +170,13 @@
 
         .title {
             width: 90%;
+
+        }
+
+        & h2 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
         .education,
@@ -178,7 +191,7 @@
 
             & p, a {
                 margin: .5rem 0;
-                font-size: 2.4rem;
+                font-size: 1.7rem;
                 font-weight: 400;
                 color: #292d73;
                 & span {
@@ -191,11 +204,7 @@
                 color: rgb(64, 62, 62);
             }
 
-            & h2 {
-                font-size: 3.5rem;
-                text-transform: uppercase;
-                font-weight: 500;
-            }
+          
 
         }
     }
@@ -224,8 +233,7 @@
         .technologies {
             & p {
                 margin: .8rem 0;
-                font-family: inherit;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 color: white;
                 font-weight: 300;
                 text-transform: capitalize;
