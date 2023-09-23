@@ -1,4 +1,3 @@
-
 /////// NAVBAR STICKY /////////////////
 
 
@@ -45,56 +44,66 @@ const navSlide = () => {
 sticky();
 navSlide();
 
+
+
 //////////////////// FORM VALIDATION ///////////////////////////////
 
 let nameInp1 = document.getElementById("input1");
 let nameInp2 = document.getElementById("input2");
 let nameInp3 = document.getElementById("input3");
-let form = document.querySelector(".left-contact");
+
 
 ////// FUNCTION TO HIDE OR DISPLAY ERROR-MESSAGE ON KEYUP or PRESS SEND BOTTON /////
 
 const handdleError = () => {
 
-// IF INPUTS ARE EMPTY, ERROR-MESSAGE WILL BE DISPLAYED WHEN SEND BOTTON IS PRESSED
+  // IF INPUTS ARE EMPTY, ERROR-MESSAGE WILL BE DISPLAYED WHEN SEND BOTTON IS PRESSED
   document.querySelector(".error-text-1").style.display = "block";
   document.querySelector(".error-text-2").style.display = "block";
   document.querySelector(".error-text-3").style.display = "block";
-  
+
+
 
   //ADDS KEYUP EVENT LISTENER TO INPUTS TO HIDE OR SHOW ERROR-MESSAGE 
 
   nameInp1.addEventListener("keyup", () => {
     if (nameInp1.value) {
       document.querySelector(".error-text-1").style.display = "none";
-    }else{
+    } else {
       document.querySelector(".error-text-1").style.display = "block";
     }
   });
   nameInp2.addEventListener("keyup", () => {
     if (nameInp2.value) {
       document.querySelector(".error-text-2").style.display = "none";
-    }else{
+    } else {
       document.querySelector(".error-text-2").style.display = "block";
     }
   });
-
   nameInp3.addEventListener("keyup", () => {
     if (nameInp3.value) {
       document.querySelector(".error-text-3").style.display = "none";
-    }else{
+    } else {
       document.querySelector(".error-text-3").style.display = "block";
     }
   });
+
 }
 
-  // IF MOUSE-ENTER ON LEFT-SECTION OF CONTACT FORM, ERROR-MESSAGE WILL BE HIDDEN 
+// IF MOUSE-ENTER ON LEFT-SECTION OF CONTACT FORM, ERROR-MESSAGE WILL BE HIDDEN 
 
-form.addEventListener("mouseenter", () => {
-  document.querySelector(".error-text-1").style.display = "none";
-  document.querySelector(".error-text-2").style.display = "none";
-  document.querySelector(".error-text-3").style.display = "none";
-});
+const RemoveError = () => {
+  const leftSection = document.querySelector(".left-contact");
 
+  leftSection.addEventListener("mouseenter", () => {
+
+    document.querySelector(".error-text-1").style.display = "none";
+    document.querySelector(".error-text-2").style.display = "none";
+    document.querySelector(".error-text-3").style.display = "none";
+
+  });
+}
+
+RemoveError();
 
 /////////////////////////////s/////
