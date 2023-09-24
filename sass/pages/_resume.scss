@@ -60,6 +60,9 @@
 
             .left-row {
                 width: 100%;
+                align-items: center;
+                margin-bottom: 4rem;
+                padding: 1rem 0;
             }
 
 
@@ -123,6 +126,7 @@
             height: 100%;
             border: .7rem solid white;
 
+
             .title {
                 display: flex;
                 flex-direction: row;
@@ -170,6 +174,11 @@
                 }
             }
         }
+
+    }
+
+    .open-skills {
+        display: none;
     }
 
     /////////////////////// // BOTTOM BLUE BOX /////////////////////////////
@@ -181,5 +190,174 @@
         padding: 5rem 0;
 
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+        @include respond(phone) {
+            width: 100%;
+            padding: 2rem 0;
+        }
+    }
+
+
+
+    //////////////////// MOBILE RESPONSE /////////////////////
+    /// 
+    /// 
+    /// 
+    /// 
+    @include respond(phone) {
+
+        // display: none;
+
+        margin-bottom: 20rem;
+        width: 100%;
+
+        .box-row {
+            width: 100%;
+            position: relative;
+
+            &:hover {
+                width: 100%;
+
+                .skill-section {
+                    left: 0;
+                }
+            }
+        }
+
+        .open-skills {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &__box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 6rem;
+                bottom: 1rem;
+                // padding: 2rem 0;
+
+                background-color: var(--color-medium-background);
+                // border-radius: 10rem;
+
+                & .bi-arrow-bar-up {
+                    display: flex;
+                    align-items: center;
+                    fill: white;
+                    z-index: 3;
+                    position: absolute;
+                    top: -1rem;
+                    color: black;
+                    width: 5rem;
+                    padding-left: 1.3rem;
+                    height: 5rem;
+                }
+
+                & p {
+                    align-items: center;
+                    font-size: 1.9rem;
+                    margin-bottom: -2rem;
+                    // text-align: center;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .middle-section {
+            align-items: center;
+            width: 100%;
+
+
+            .box-left {
+                width: 100%;
+                align-items: center;
+
+                & .certification:hover {
+                    border-radius: 5px;
+                    background-color: white;
+                    transition: none;
+
+                    & p,
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+        .skill-section {
+            display: none;
+            padding: 0 1rem;
+            width: 100%;
+            height: 100%;
+
+            z-index: 4;
+            transform: skewY(0deg);
+
+            @include respond(phone) {
+                left: 0;
+            }
+
+            &:hover {
+                left: 0 !important;
+            }
+
+            .skill-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: .2rem 3rem;
+                width: 100%;
+                height: 91%;
+                background-color: var(--color-medium-background);
+
+                border: .7rem solid white;
+
+
+                .title {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+                }
+            }
+
+            .technologies {
+     
+                padding: auto;
+                width: 100%;
+                border: .3rem solid white;
+                margin: 1.5rem 0;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+                &:hover {
+                    transform: scale(1.0, 1.0);
+                    transition: ease-in-out 0.3s;
+                }
+
+                .box-outside {
+                    width: 100%;
+                    height: 1.5rem;
+                    margin-bottom: 1rem;
+
+                    & span {
+                        border: .1px solid whitesmoke;
+                        margin: 0;
+                        position: absolute;
+                        width: 100%;
+                        height: 1.5rem;
+                    }
+                }
+            }
+
+        }
+
     }
 }

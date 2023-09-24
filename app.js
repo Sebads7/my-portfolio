@@ -107,3 +107,11 @@ const RemoveError = () => {
 RemoveError();
 
 /////////////////////////////s/////
+
+// create a function when i click icon-skills, it change skill-section to display block
+const iconSkills = document.querySelector(".open-skills");
+const skillSection = document.querySelector(".skill-section");
+
+iconSkills.addEventListener("click", () => {
+  skillSection.style.display = "block";
+});

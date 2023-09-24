@@ -2,6 +2,10 @@
     color: var(--color-dark-gray);
     text-decoration: none;
     font-size: 1.6rem;
+
+    @include respond(phone) {
+        font-size: 1.8rem;
+    }
 }
 
 .nav-container {
@@ -13,11 +17,11 @@
         font-size: 3rem;
         font-weight: 900;
 
-
-        @media only screen and (max-width: 1200px) {
+        @include respond(phone) {
             font-size: 2.5rem;
+            color: var(--color-light-blue-1);
+            -webkit-text-stroke: none;
         }
-
 
     }
 
@@ -32,6 +36,10 @@
 
         overflow: hidden;
         animation: animate 2s linear 4.5s;
+
+        @include respond(phone) {
+            display: none;
+        }
 
     }
 
@@ -122,13 +130,37 @@
 
         }
     }
+
+
+    @include respond(phone) {
+
+        &__text-intro {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            & span {
+                font-size: 5.5rem;
+                font-weight: 300;
+
+
+                & span {
+
+                    color: var(--color-light-blue-1);
+                    text-transform: capitalize;
+                    font-weight: bold;
+
+                }
+            }
+        }
+    }
 }
 
 // SECOND-SECTION PROJECTS//////
 
 
 .second-section {
-    
+
     & h2 {
         display: flex;
         align-items: center;
@@ -136,7 +168,8 @@
         margin-top: 10rem;
         color: white;
         transform: skew(-5deg);
-       
+        font-size: 4rem;
+        font-weight: 700;
     }
 
     .first-text {
@@ -146,7 +179,7 @@
         width: 100%;
         height: 4rem;
         color: white;
-       
+
 
         transition: all ease 0.5s;
         font-size: 1em;
@@ -173,7 +206,6 @@
 
         .title {
             width: 90%;
-
         }
 
         & h2 {
@@ -184,19 +216,21 @@
 
         .education,
         .certification,
-        .work-exp, a {
+        .work-exp,
+        a {
             display: flex;
             flex-direction: column;
-            // width: 80%;
             margin: 5rem 0;
             text-decoration: none;
             transition: all ease .2s;
 
-            & p, a {
+            & p,
+            a {
                 margin: .5rem 0;
                 font-size: 1.7rem;
                 font-weight: 400;
                 color: #292d73;
+
                 & span {
                     font-weight: 500;
                     color: orange;
@@ -206,9 +240,6 @@
             & p:last-child {
                 color: rgb(64, 62, 62);
             }
-
-          
-
         }
     }
 
@@ -252,4 +283,55 @@
             line-height: 5rem;
         }
     }
+
+
+
+    @include respond(phone) {
+        .left-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .title {
+                width: auto;
+                align-items: center;
+            }
+
+            .education,
+            .certification,
+            .work-exp,
+            a {
+
+                width: auto;
+                align-items: center;
+                margin: 2rem 0;
+
+                & a>p:first-child {
+                    text-align: center;
+                    border: 1px solid orange;
+                    background-color: orange;
+                    color: white;
+                    border-radius: 1rem;
+                    padding: 1rem 2rem;
+                }
+
+                & p,
+                a {
+                    width: 38rem;
+
+                    & span {
+                        font-weight: 500;
+                        color: orange;
+                    }
+                }
+
+                & p:last-child {
+                        width: auto;
+                }
+            }
+        }
+    }
+
+
 }

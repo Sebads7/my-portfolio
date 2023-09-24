@@ -12,6 +12,9 @@
     padding: 10rem 6rem;
     margin-bottom: 50rem;
 
+    font-family: inherit;
+
+
     .back-ground {
     
         position: relative;
@@ -19,11 +22,6 @@
         opacity: 85%;
         background-size: cover;
         width: 100%;
-
-        @media only screen and (max-width: 1700px) {
-            width: 95%; 
-            height: 95%;
-        }
 
         -webkit-transform: skew(5deg);
         -moz-transform: skew(5deg);
@@ -38,7 +36,6 @@
         padding: 9vmin;
         padding-bottom: 20rem;
         overflow: hidden;
-
       
 
         .box {
@@ -46,8 +43,6 @@
             position: relative;
 
             width: 90%;
-
-         
 
             height: 75vmin;
             border: 2px solid var(--color-light-gray);
@@ -203,4 +198,32 @@
             }
         }
     }
+
+
+
+    @include respond(phone) {
+
+        // display: none;
+        
+        padding: 10rem 0;
+        margin-bottom: 20rem;
+        .back-ground {
+            position: relative;
+            background-color: var(--color-light-blue);
+    
+            -webkit-transform: skew(0deg);
+            -moz-transform: skew(0deg);
+            transform: skew(0deg);
+        }
+
+        &__row-align{
+            display: flex;
+            flex-direction: column;
+
+            .box {
+                width: 100%;
+            }
+        }
+      
+     }
 }
