@@ -11,12 +11,39 @@
     font-size: 1.5rem;
     font-family: inherit;
 
+    ////////////////////////////// code for phone 
+    @include respond(phone) {
+        height: 100%;
+        width: auto;
+        padding: 10rem 0;
+    }
+
+    ////////////////////////////
+    /// 
+    /// 
+    @include respond(tab-port) {
+        height: 100%;
+        width: auto;
+        padding: 10rem 0;
+    }
+
     .row-box {
         display: flex;
         flex-direction: row;
         text-align: center;
         justify-content: center;
         width: 100%;
+        
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+        ///////////////////////////// code for phone 
+      @include respond(phone) {
+            flex-direction: column;
+        }
+
+        ////////////////////////////
+
 
         & .left-contact {
             color: white;
@@ -27,7 +54,43 @@
             width: 50%;
             line-height: 7rem;
 
+            ////////////////////////////// code for phone 
+            @include respond(phone) {
+                width: 100%;
+
+                & h2 {
+                    margin-bottom: 3rem;
+                }
+
+                .sub-title {
+                    display: flex;
+                    line-height: 4rem;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
+            //////////////////////////
+            /// 
+            /// 
+            /// 
+            @include respond(tab-port) {
+                width: 100%;
+
+                & h2 {
+                    margin-bottom: 3rem;
+                }
+
+                .sub-title {
+                    display: flex;
+                    line-height: 4rem;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
             & h2 {
+
                 font-size: 4rem;
                 font-weight: 600;
             }
@@ -49,6 +112,16 @@
                 gap: 10rem;
                 padding: 10rem 0;
 
+                // code for phone 
+                @include respond(phone) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                ////////////////////////////
+
                 & .email-row,
                 .phone-row {
                     display: flex;
@@ -68,7 +141,19 @@
             align-items: center;
             justify-content: center;
             width: 50%;
-            padding: 1rem 1rem;
+            height: 100%;
+            padding: 1rem 5rem;
+
+
+            @include respond(tab-port) {
+                width: 100%;
+                padding: 1rem 4rem;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+                padding: .9rem 1rem;
+            }
 
             & form {
                 display: flex;
@@ -76,18 +161,43 @@
                 align-items: center;
                 flex-direction: column;
 
-
-
-                width: 58rem;
-                height: 100%;
+                width: 60rem;
+                height: 90rem;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 transition: ease-in-out 0.3s;
-                padding: 5rem 0;
+                padding: 5rem 4rem;
+
+                @include respond(big-desktop) {
+                    width: 55rem;
+                    height: 85rem;
+                    padding: 5rem 6rem;
+                }
+
+                @include respond(tab-land) {
+                    width: 50rem;
+                    height: 80rem;
+                   
+                }
+
+                /////////////////////////////// code for phone 
+                @include respond(phone) {
+                    width: 90%;
+                    height: 75rem;
+                    padding: 2rem 2.5rem;
+                }
+                //////////////////////////  
 
                 &:hover {
                     transform: scale(1.05, 1.08);
                     transition: ease-in-out 0.3s;
+
+                    ////////////////////////////// code for phone 
+                    @include respond(phone) {
+                        transform: scale(1.0, 1.0);
+                    }
+
+                    ////////////////////////////
                 }
 
                 & h2 {
@@ -113,48 +223,47 @@
 
                 & .col {
                     margin: 2rem 0;
-
+                    display: flex;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
                 }
 
                 & .label,
                 .text-area {
-                    // color: white;
+                    display: block;
                     pointer-events: none;
                     z-index: 1;
                     position: absolute;
                     margin-left: 2rem;
-                    display: block;
+                    left: 0;
                     transition: all .3s;
-                    transform: translateY(-3.5rem);
                     transition: transform 200ms, color 200ms;
-                }
-
-                .text-area {
-                    transform: translateY(-22.5rem);
                 }
 
                 & ::placeholder {
                     color: transparent;
+                    padding: 2rem;
                 }
-
-
 
                 & input {
                     position: relative;
                     border: .6px solid var(--color-dark-blue);
                     border-radius: .5rem;
-                    width: 40rem;
+
+                    width: 100%;
                     height: 5rem;
                     padding: 2rem;
 
                     &:focus~.label,
                     input:not(:placeholder-shown)~.label {
-                        transform: translateY(-8rem);
+                        transform: translateY(-4.5rem);
                     }
 
                     &:not(:placeholder-shown)~.label {
                         color: var(--color-dark-blue);
-                        transform: translateY(-8rem);
+                        transform: translateY(-4.5rem);
                     }
 
                     &:focus~.label {
@@ -162,24 +271,29 @@
                     }
                 }
 
+                .text-area {
+                    transform: translateY(-11rem);
+                }
+
                 & textarea {
-                    width: 40rem;
+                    width: 100%;
                     padding-top: 0;
                     vertical-align: top;
+                    padding: 2rem;
 
                     resize: none;
                     border: .6px solid #345c86;
                     border-radius: .5rem;
-                    // margin-bottom: 1.5rem;
 
                     &:focus~.text-area,
                     input:not(:placeholder-shown)~.text-area {
-                        transform: translateY(-27.3rem);
+                        transform: translateY(-16rem);
+
                     }
 
                     &:not(:placeholder-shown)~.text-area {
                         color: var(--color-dark-blue);
-                        transform: translateY(-27.3rem);
+                        transform: translateY(-16rem);
                     }
 
                     &:focus~.text-area {
@@ -188,7 +302,7 @@
                 }
 
                 & button {
-                    width: 40rem;
+                    width: 100%;
                     height: 5rem;
                     background-color: #345c86;
                     color: white;
@@ -200,107 +314,23 @@
                     &:hover {
                         transform: scale(1.1, 1.1);
                         transition: ease-in-out 0.3s;
-                    }
-                }
-            }
-        }
-    }
 
-
-//////// mobile responsive //////////
-
-    @include respond(phone) {
-        // display: none;
-
-        height: 100%;
-        width: auto;
-        padding: 10rem 0;
-
-        .row-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            & .left-contact {
-                width: 100%;
-
-                & h2 {
-                    margin-bottom: 3rem;
-                }
-
-                .sub-title {
-                    display: flex;
-                    line-height: 4rem;
-                    flex-direction: column;
-                    width: 100%;
-                }
-
-                & .row-1 {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-
-            & .right-row {
-                width: 100%;
-
-                & form {
-                    width: 40rem;
-                    padding: 4rem;
-
-                    &:hover {
-                        transform: scale(1.0, 1.0);
-                    }
-
-                    & input {
-                        width: 30rem;
-                        height: 5rem;
-                    }
-
-                    .text-area {
-                        transform: translateY(-19rem);
-                    }
-
-                    & textarea {
-                        width: 30rem;
-
-                        &:focus~.text-area,
-                        input:not(:placeholder-shown)~.text-area {
-                            transform: translateY(-24rem);
-                        }
-
-                        &:not(:placeholder-shown)~.text-area {
-                            color: var(--color-dark-blue);
-                            transform: translateY(-24rem);
-                        }
-
-                        &:focus~.text-area {
-                            color: orange;
-                        }
-                    }
-
-                    & button {
-                        width: 30rem;
-
-                        &:hover {
+                        // code for phone 
+                        @include respond(phone) {
                             transform: scale(1.0, 1.0);
                         }
-                    }
 
+                        //////////////////////////// 
+                    }
                 }
             }
+
+            & form {}
 
         }
     }
 
-
-
 }
-
-
-
-
 
 
 
@@ -314,27 +344,32 @@
         justify-content: space-between;
         padding: 1rem 15rem;
 
+        // code for phone 
+        @include respond(phone) {
+            padding: 3rem 1rem 5rem 1rem;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 2rem;
+        }
+
+        ////////////////////////////
+
+
         & p,
         a {
             font-size: 2rem;
             font-weight: 300;
             color: white;
             text-decoration: none;
-        }
-    }
 
-    @include respond(phone) {
-        // display: none;
-        
-        .row {
-            padding: 3rem 1rem 5rem 1rem;
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: 2rem;
-
-            & p{
-                text-align: center;
+            // code for phone 
+            @include respond(phone) {
+                & p {
+                    text-align: center;
+                }
             }
+
+            ////////////////////////////
         }
     }
 }

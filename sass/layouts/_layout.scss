@@ -175,6 +175,7 @@
     .first-text {
         justify-content: center;
         text-align: center;
+        font-size: 2rem;
         padding: 1rem 1rem;
         width: 100%;
         height: 4rem;
@@ -184,6 +185,12 @@
         transition: all ease 0.5s;
         font-size: 1em;
         transform: skew(-5deg);
+    }
+
+    @include respond(phone) {
+        & h2{
+            transform: skew(0deg); 
+        }
     }
 }
 
