@@ -280,6 +280,7 @@
             align-items: center;
             position: relative;
 
+
             &__box {
                 display: flex;
                 flex-direction: column;
@@ -289,6 +290,7 @@
                 height: 6rem;
                 bottom: 1rem;
 
+
                 & .bi-arrow-bar-up {
                     display: flex;
                     align-items: center;
@@ -296,16 +298,21 @@
                     z-index: 3;
                     position: absolute;
                     top: -2rem;
-                    color: black;
                     width: 5rem;
                     padding-left: 1.3rem;
                     height: 5rem;
+
+                  
                 }
+
+       
 
                 & p {
                     align-items: center;
                     font-size: 1.9rem;
                     text-transform: uppercase;
+                   
+                
                 }
             }
         }
@@ -356,7 +363,6 @@
 
                     }
                     
-
                     & .bi-arrow-bar-down {
                         display: flex;
                         justify-content: flex-end;

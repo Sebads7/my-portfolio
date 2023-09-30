@@ -97,6 +97,8 @@ nav a:hover:before{
         transform: translateY(-1%);
         animation: 3s slide-botton ease-in-out forwards 1s infinite;
         transition: all 0.4s ease;
+
+
 }
 
 .bi-arrow-bar-down{
@@ -104,6 +106,4 @@ nav a:hover:before{
         animation: 3s slide-botton ease-in-out forwards 1s infinite;
         transition: all 0.4s ease;
         // transform: rotate(180deg);
-
-      
 }

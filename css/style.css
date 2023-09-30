@@ -19,6 +19,14 @@
     bottom: 100%;
     transform: translate(0, -20%); } }
 
+@keyframes slide-certfications {
+  0%, 5%, 95%, 100% {
+    bottom: 0;
+    transform: translate(0, 0); }
+  45%, 55% {
+    bottom: 100%;
+    transform: translate(0.3%, -2%); } }
+
 :root {
   --color-light-blue-1: #378ce6;
   --color-light-blue: #326ca9;
@@ -295,7 +303,10 @@ body {
           background-color: orange;
           color: white;
           border-radius: 1rem;
-          padding: 1rem 2rem; }
+          padding: 1rem 2rem;
+          animation: 3s slide-certfications ease-in-out forwards 1s infinite;
+          transition: all 0.4s ease;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
         .box-row .left-row .education p,
         .box-row .left-row .education a,
         .box-row .left-row .certification p,
@@ -947,7 +958,6 @@ nav a:hover:before {
             z-index: 3;
             position: absolute;
             top: -2rem;
-            color: black;
             width: 5rem;
             padding-left: 1.3rem;
             height: 5rem; }
@@ -1134,7 +1144,7 @@ nav a:hover:before {
       @media (max-width: 37.5em) {
         .fifth-section .row-box .right-row {
           width: 100%;
-          padding: .9rem 1rem; } }
+          padding: .9rem .5rem; } }
       .fifth-section .row-box .right-row form {
         display: flex;
         justify-content: center;
@@ -1156,10 +1166,9 @@ nav a:hover:before {
         @media (max-width: 37.5em) {
           .fifth-section .row-box .right-row form {
             width: 90%;
-            height: 75rem;
-            padding: 2rem 2.5rem; } }
+            padding: 2rem 4rem; } }
         .fifth-section .row-box .right-row form:hover {
-          transform: scale(1.05, 1.08);
+          transform: scale(1.04, 1.06);
           transition: ease-in-out 0.3s; }
           @media (max-width: 37.5em) {
             .fifth-section .row-box .right-row form:hover {
@@ -1180,17 +1189,22 @@ nav a:hover:before {
           flex-direction: column;
           width: 100%;
           padding-bottom: 1rem; }
-          .fifth-section .row-box .right-row form .col .error-text-1,
-          .fifth-section .row-box .right-row form .col .error-text-2,
-          .fifth-section .row-box .right-row form .col .error-text-3 {
-            display: flex;
-            position: absolute;
-            left: 0;
-            text-align: start;
-            align-self: flex-start;
-            font-family: inherit;
-            color: red;
-            font-size: 1.4rem; }
+          .fifth-section .row-box .right-row form .col .error-div {
+            position: relative;
+            padding: .2rem 0 1rem 0; }
+            .fifth-section .row-box .right-row form .col .error-div .error-text-1,
+            .fifth-section .row-box .right-row form .col .error-div .error-text-2,
+            .fifth-section .row-box .right-row form .col .error-div .error-text-3 {
+              display: none;
+              position: absolute;
+              left: 0;
+              text-align: start;
+              align-self: flex-start;
+              font-family: inherit;
+              color: red;
+              font-size: 1.4rem; }
+          .fifth-section .row-box .right-row form .col .label {
+            transform: translateY(-0.7rem); }
           .fifth-section .row-box .right-row form .col .label,
           .fifth-section .row-box .right-row form .col .text-area {
             display: flex;
@@ -1206,12 +1220,12 @@ nav a:hover:before {
             color: transparent;
             padding: 2rem; }
           .fifth-section .row-box .right-row form .col input {
-            display: flex;
             border: 0.6px solid var(--color-dark-blue);
             border-radius: .5rem;
             width: 100%;
             height: 5rem;
-            padding: 2rem; }
+            padding: 2rem;
+            padding-bottom: auto; }
             .fifth-section .row-box .right-row form .col input:focus ~ .label,
             .fifth-section .row-box .right-row form .col input input:not(:placeholder-shown) ~ .label {
               transform: translateY(-4.5rem); }

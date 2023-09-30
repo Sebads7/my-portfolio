@@ -104,6 +104,7 @@ const handdleError = () => {
 
 const RemoveError = () => {
   const leftSection = document.querySelector(".left-contact");
+  const btn = document.querySelector(".btn");
 
   leftSection.addEventListener("mouseenter", () => {
 

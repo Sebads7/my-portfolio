@@ -153,7 +153,7 @@
 
             @include respond(phone) {
                 width: 100%;
-                padding: .9rem 1rem;
+                padding: .9rem .5rem;
             }
 
             & form {
@@ -181,14 +181,14 @@
                 /////////////////////////////// code for phone 
                 @include respond(phone) {
                     width: 90%;
-                    height: 75rem;
-                    padding: 2rem 2.5rem;
+                  
+                    padding: 2rem 4rem;
                 }
 
                 //////////////////////////  
 
                 &:hover {
-                    transform: scale(1.05, 1.08);
+                    transform: scale(1.04, 1.06);
                     transition: ease-in-out 0.3s;
 
                     ////////////////////////////// code for phone 
@@ -218,24 +218,34 @@
                     width: 100%;
                     padding-bottom: 1rem;
 
+                 
+                & .error-div{
+                    position: relative;
+                    padding: .2rem 0 1rem 0 ;
+                    & .error-text-1,
+                    .error-text-2,
+                    .error-text-3 {
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        text-align: start;
+                        align-self: flex-start;
+                        font-family: inherit;
+                        color: red;
+                        font-size: 1.4rem;
+                    }
+                }    
 
-                & .error-text-1,
-                .error-text-2,
-                .error-text-3 {
-                    display: flex;
-                    position: absolute;
-                    left: 0;
-                    text-align: start;
-                    align-self: flex-start;
-                    font-family: inherit;
-                    color: red;
-                    font-size: 1.4rem;
+                & .label{
+                    transform: translateY(-.7rem);
                 }
+           
 
                 & .label,
                 .text-area {
                     display: flex;
                     justify-content: center;
+
                     pointer-events: none;
                     z-index: 1;
                     position: absolute;
@@ -251,13 +261,12 @@
                 }
 
                 & input {
-                    display: flex;
                     border: .6px solid var(--color-dark-blue);
                     border-radius: .5rem;
-
                     width: 100%;
                     height: 5rem;
                     padding: 2rem;
+                    padding-bottom: auto;
 
                     &:focus~.label,
                     input:not(:placeholder-shown)~.label {
@@ -285,7 +294,6 @@
                     padding-top: 0;
                     vertical-align: top;
                     padding: 2rem;
-
                     resize: none;
                     border: .6px solid #345c86;
                     border-radius: .5rem;

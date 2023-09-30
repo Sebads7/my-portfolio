@@ -33,6 +33,20 @@
   }
 
 
+
+  @keyframes slide-certfications{
+
+    0%, 5%, 95%, 100% { 
+        bottom: 0;
+        transform: translate(0, 0);
+    }
+    45%, 55% {
+        bottom: 100%;
+        transform: translate(.3%, -2%);
+    }
+  }
+
+
   @mixin respond($breakpoint){
     @if $breakpoint == phone {
         @media (max-width: 37.5em) {@content}; //600px
