@@ -110,8 +110,20 @@ RemoveError();
 
 // create a function when i click icon-skills, it change skill-section to display block
 const iconSkills = document.querySelector(".open-skills");
+const skillshowHide = document.querySelector(".open-skills");
 const skillSection = document.querySelector(".skill-section");
+const closeSkills = document.querySelector(".close-skills");
 
 iconSkills.addEventListener("click", () => {
   skillSection.style.display = "block";
+  skillshowHide.style.display = "none";
+
+
+  // if click on close-skills make skillSelection display none
+  closeSkills.addEventListener("click", () => {
+    skillSection.style.display = "none";
+    skillshowHide.style.display = "block";
+
+  })
+  
 });

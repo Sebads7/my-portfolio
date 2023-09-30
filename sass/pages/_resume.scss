@@ -10,6 +10,9 @@
 
     margin-bottom: 50rem;
 
+
+
+
     .box-row {
         display: flex;
         flex-direction: column;
@@ -27,6 +30,19 @@
 
             .skill-section {
                 left: 60%;
+                transform: skewY(0);
+                transition: ease-in-out 0.3s;
+                left: 50% !important;
+
+                .skill-box {
+                    padding: 2rem 5rem;
+
+                    .technologies {
+                        margin: 2rem 5rem;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+
             }
         }
     }
@@ -71,6 +87,7 @@
                 background-color: var(--color-dark-blue);
                 transition: all ease .4s;
 
+
                 & p,
                 a {
                     display: flex;
@@ -101,20 +118,6 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-        &:hover {
-            transform: skewY(0);
-            transition: ease-in-out 0.3s;
-            left: 50% !important;
-
-            .skill-box {
-                padding: 2rem 5rem;
-
-                .technologies {
-                    margin: 2rem 5rem;
-                    transition: ease-in-out 0.3s;
-                }
-            }
-        }
 
         .skill-box {
             display: flex;
@@ -131,6 +134,10 @@
                 display: flex;
                 flex-direction: row;
                 gap: 2rem;
+
+                & .bi-arrow-bar-down {
+                    display: none;
+                }
             }
         }
 
@@ -206,70 +213,42 @@
     /// 
     @include respond(phone) {
 
-        // display: none;
-
         margin-bottom: 20rem;
         width: 100%;
+       
 
         .box-row {
             width: 100%;
             position: relative;
+            margin: 0 .5rem;
+           
 
             &:hover {
                 width: 100%;
 
                 .skill-section {
-                    left: 0;
-                }
-            }
-        }
-
-        .open-skills {
-            display: flex;
-            align-items: center;
-            position: relative;
-
-            &__box {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 6rem;
-                bottom: 1rem;
-                // padding: 2rem 0;
-
-                background-color: var(--color-medium-background);
-                // border-radius: 10rem;
-
-                & .bi-arrow-bar-up {
-                    display: flex;
-                    align-items: center;
-                    fill: white;
-                    z-index: 3;
-                    position: absolute;
-                    top: -1rem;
-                    color: black;
-                    width: 5rem;
-                    padding-left: 1.3rem;
-                    height: 5rem;
+                    left: 0 !important;
+                    height: auto;
+                    padding: 0;
+    
+                    .skill-box {
+                        padding: 1rem;
+                        padding-bottom: 10rem;
+    
+                        .technologies {
+                            margin: 1rem 0;
+                        }
+                    }
+    
                 }
 
-                & p {
-                    align-items: center;
-                    font-size: 1.9rem;
-                    margin-bottom: -2rem;
-                    // text-align: center;
-                    color: white;
-                    text-transform: uppercase;
-                }
             }
         }
 
         .middle-section {
             align-items: center;
             width: 100%;
-
+           
 
             .box-left {
                 width: 100%;
@@ -287,17 +266,56 @@
                         align-items: center;
                         color: white;
                         font-weight: 200;
+
+                        & p:last-child{
+                            color: black;
+                        }
                     }
                 }
             }
         }
 
+        .open-skills {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &__box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 6rem;
+                bottom: 1rem;
+
+                & .bi-arrow-bar-up {
+                    display: flex;
+                    align-items: center;
+                    fill: black;
+                    z-index: 3;
+                    position: absolute;
+                    top: -2rem;
+                    color: black;
+                    width: 5rem;
+                    padding-left: 1.3rem;
+                    height: 5rem;
+                }
+
+                & p {
+                    align-items: center;
+                    font-size: 1.9rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
         .skill-section {
             display: none;
-            padding: 0 1rem;
+            padding: 0;
+            margin: 0;
             width: 100%;
-            height: 100%;
-
+            height: auto;
+            left: 0;
             z-index: 4;
             transform: skewY(0deg);
 
@@ -310,11 +328,11 @@
             }
 
             .skill-box {
-                display: flex;
+                display: block;
                 align-items: center;
                 justify-content: center;
 
-                padding: .2rem 3rem;
+                padding: 4rem 1rem;
                 width: 100%;
                 height: 91%;
                 background-color: var(--color-medium-background);
@@ -325,16 +343,47 @@
                 .title {
                     display: flex;
                     flex-direction: row;
-                    gap: 2rem;
+                    justify-content: center;
+                    width: 100%;
+
+                    & .icon-skills{
+                       padding-right: 0;
+
+                    }
+
+                    & h3{
+                        width: auto;
+
+                    }
+                    
+
+                    & .bi-arrow-bar-down {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-self: start;
+
+                        left: 5rem;
+
+                        fill: black;
+                        top: 1rem;
+                        color: black;
+                        width: 2.5rem;
+                        padding: 0;
+                        height: 2.5rem;
+                         & path {
+                            transform: rotate(180deg);
+                            transform-origin: 50% 50%;
+                          }
+                    }
                 }
             }
 
             .technologies {
-     
+
                 padding: auto;
                 width: 100%;
                 border: .3rem solid white;
-                margin: 1.5rem 0;
+                margin: 1rem 0;
                 box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
                 &:hover {

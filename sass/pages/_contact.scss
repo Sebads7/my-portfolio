@@ -324,9 +324,6 @@
                     }
                 }
             }
-
-            & form {}
-
         }
     }
 
@@ -361,6 +358,7 @@
             font-weight: 300;
             color: white;
             text-decoration: none;
+            text-align: center;
 
             // code for phone 
             @include respond(phone) {

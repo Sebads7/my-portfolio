@@ -303,13 +303,15 @@
             .title {
                 width: auto;
                 align-items: center;
+               
             }
 
             .education,
             .certification,
             .work-exp,
             a {
-
+                display: flex;
+                text-align: center;
                 width: auto;
                 align-items: center;
                 margin: 2rem 0;
