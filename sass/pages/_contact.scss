@@ -33,12 +33,13 @@
         text-align: center;
         justify-content: center;
         width: 100%;
-        
+
         @include respond(tab-port) {
             flex-direction: column;
         }
+
         ///////////////////////////// code for phone 
-      @include respond(phone) {
+        @include respond(phone) {
             flex-direction: column;
         }
 
@@ -141,7 +142,7 @@
             align-items: center;
             justify-content: center;
             width: 50%;
-            height: 100%;
+            height: auto;
             padding: 1rem 5rem;
 
 
@@ -162,7 +163,7 @@
                 flex-direction: column;
 
                 width: 60rem;
-                height: 90rem;
+                height: 100%;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 transition: ease-in-out 0.3s;
@@ -170,14 +171,11 @@
 
                 @include respond(big-desktop) {
                     width: 55rem;
-                    height: 85rem;
                     padding: 5rem 6rem;
                 }
 
                 @include respond(tab-land) {
                     width: 50rem;
-                    height: 80rem;
-                   
                 }
 
                 /////////////////////////////// code for phone 
@@ -186,6 +184,7 @@
                     height: 75rem;
                     padding: 2rem 2.5rem;
                 }
+
                 //////////////////////////  
 
                 &:hover {
@@ -201,6 +200,7 @@
                 }
 
                 & h2 {
+                    color: red;
                     font-size: 3rem;
                     font-weight: 300;
                     color: var(--color-dark-blue);
@@ -209,30 +209,33 @@
                     margin-top: 4rem;
                 }
 
-
-                & .error-text-1,
-                .error-text-2,
-                .error-text-3 {
-                    display: none;
-                    font-family: inherit;
-                    color: red;
-                    font-size: 1.2rem;
-                    text-align: left;
-                    margin: 1rem 0;
-                }
-
                 & .col {
                     margin: 2rem 0;
                     display: flex;
                     position: relative;
                     justify-content: center;
-                    align-items: center;
+                    flex-direction: column;
                     width: 100%;
+                    padding-bottom: 1rem;
+
+
+                & .error-text-1,
+                .error-text-2,
+                .error-text-3 {
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    text-align: start;
+                    align-self: flex-start;
+                    font-family: inherit;
+                    color: red;
+                    font-size: 1.4rem;
                 }
 
                 & .label,
                 .text-area {
-                    display: block;
+                    display: flex;
+                    justify-content: center;
                     pointer-events: none;
                     z-index: 1;
                     position: absolute;
@@ -248,7 +251,7 @@
                 }
 
                 & input {
-                    position: relative;
+                    display: flex;
                     border: .6px solid var(--color-dark-blue);
                     border-radius: .5rem;
 
@@ -272,10 +275,12 @@
                 }
 
                 .text-area {
+                    display: flex;
                     transform: translateY(-11rem);
                 }
 
                 & textarea {
+                    display: flex;
                     width: 100%;
                     padding-top: 0;
                     vertical-align: top;
@@ -288,7 +293,6 @@
                     &:focus~.text-area,
                     input:not(:placeholder-shown)~.text-area {
                         transform: translateY(-16rem);
-
                     }
 
                     &:not(:placeholder-shown)~.text-area {
@@ -300,6 +304,11 @@
                         color: orange;
                     }
                 }
+
+
+                }
+
+
 
                 & button {
                     width: 100%;

@@ -370,8 +370,11 @@
                         required 
                         >
                         <label for="firstname" class="label">Full Name</label>
+                  <div>
                     <p class="error-text-1  error-message">Please enter your name</p>
+                  </div>
                 </div>
+            
                 <div class="col">
                     <input type="email" 
                     name="email" 
@@ -380,8 +383,11 @@
                     id="input2" 
                     required>
                         <label for="email" class="label">Email Address</label>
-                    <p class="error-text-2  error-text">Please enter your email</p>
+                    <div>
+                        <p class="error-text-2  error-text">Please enter your email</p>
+                    </div>
                 </div>
+               
                 <div class="col">
                     <textarea placeholder="# " 
                     class="form-control" 
@@ -391,9 +397,12 @@
                     required
                     ></textarea>
                         <label for="message" class="text-area label">Enter your message</label>
+                   <div>
                     <p class="error-text-3  error-text">Please enter your message</p>
+                   </div>
                 </div>
-                    <button type="submit" onclick="handdleError()">Send</button>
+              
+                    <button class="btn" type="submit" onclick="handdleError()">Send</button>
                 </form>
             </div>
         </div>

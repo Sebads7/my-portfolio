@@ -58,11 +58,21 @@ let nameInp3 = document.getElementById("input3");
 const handdleError = () => {
 
   // IF INPUTS ARE EMPTY, ERROR-MESSAGE WILL BE DISPLAYED WHEN SEND BOTTON IS PRESSED
-  document.querySelector(".error-text-1").style.display = "block";
-  document.querySelector(".error-text-2").style.display = "block";
-  document.querySelector(".error-text-3").style.display = "block";
-
-
+  if (!nameInp1.value){
+    document.querySelector(".error-text-1").style.display = "block";
+  }else{
+    document.querySelector(".error-text-1").style.display = "none";
+  }
+  if (!nameInp2.value){
+    document.querySelector(".error-text-2").style.display = "block";
+  }else{
+    document.querySelector(".error-text-2").style.display = "none";
+  }
+  if (!nameInp3.value){
+    document.querySelector(".error-text-3").style.display = "block";
+  }else{
+    document.querySelector(".error-text-3").style.display = "none";
+  }
 
   //ADDS KEYUP EVENT LISTENER TO INPUTS TO HIDE OR SHOW ERROR-MESSAGE 
 
@@ -101,12 +111,15 @@ const RemoveError = () => {
     document.querySelector(".error-text-2").style.display = "none";
     document.querySelector(".error-text-3").style.display = "none";
 
+
   });
 }
 
 RemoveError();
 
 /////////////////////////////s/////
+
+
 
 // create a function when i click icon-skills, it change skill-section to display block
 const iconSkills = document.querySelector(".open-skills");
@@ -119,7 +132,7 @@ iconSkills.addEventListener("click", () => {
   skillshowHide.style.display = "none";
 
 
-  // if click on close-skills make skillSelection display none
+  // if click on close-skills  skillSelection display none
   closeSkills.addEventListener("click", () => {
     skillSection.style.display = "none";
     skillshowHide.style.display = "block";

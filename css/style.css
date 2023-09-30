@@ -1125,7 +1125,7 @@ nav a:hover:before {
       align-items: center;
       justify-content: center;
       width: 50%;
-      height: 100%;
+      height: auto;
       padding: 1rem 5rem; }
       @media (max-width: 56.25em) {
         .fifth-section .row-box .right-row {
@@ -1141,7 +1141,7 @@ nav a:hover:before {
         align-items: center;
         flex-direction: column;
         width: 60rem;
-        height: 90rem;
+        height: 100%;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transition: ease-in-out 0.3s;
@@ -1149,12 +1149,10 @@ nav a:hover:before {
         @media (min-width: 112.5em) {
           .fifth-section .row-box .right-row form {
             width: 55rem;
-            height: 85rem;
             padding: 5rem 6rem; } }
         @media (max-width: 75em) {
           .fifth-section .row-box .right-row form {
-            width: 50rem;
-            height: 80rem; } }
+            width: 50rem; } }
         @media (max-width: 37.5em) {
           .fifth-section .row-box .right-row form {
             width: 90%;
@@ -1167,74 +1165,81 @@ nav a:hover:before {
             .fifth-section .row-box .right-row form:hover {
               transform: scale(1, 1); } }
         .fifth-section .row-box .right-row form h2 {
+          color: red;
           font-size: 3rem;
           font-weight: 300;
           color: var(--color-dark-blue);
           line-height: 1rem;
           margin-bottom: 6rem;
           margin-top: 4rem; }
-        .fifth-section .row-box .right-row form .error-text-1,
-        .fifth-section .row-box .right-row form .error-text-2,
-        .fifth-section .row-box .right-row form .error-text-3 {
-          display: none;
-          font-family: inherit;
-          color: red;
-          font-size: 1.2rem;
-          text-align: left;
-          margin: 1rem 0; }
         .fifth-section .row-box .right-row form .col {
           margin: 2rem 0;
           display: flex;
           position: relative;
           justify-content: center;
-          align-items: center;
-          width: 100%; }
-        .fifth-section .row-box .right-row form .label,
-        .fifth-section .row-box .right-row form .text-area {
-          display: block;
-          pointer-events: none;
-          z-index: 1;
-          position: absolute;
-          margin-left: 2rem;
-          left: 0;
-          transition: all .3s;
-          transition: transform 200ms, color 200ms; }
-        .fifth-section .row-box .right-row form ::placeholder {
-          color: transparent;
-          padding: 2rem; }
-        .fifth-section .row-box .right-row form input {
-          position: relative;
-          border: 0.6px solid var(--color-dark-blue);
-          border-radius: .5rem;
+          flex-direction: column;
           width: 100%;
-          height: 5rem;
-          padding: 2rem; }
-          .fifth-section .row-box .right-row form input:focus ~ .label,
-          .fifth-section .row-box .right-row form input input:not(:placeholder-shown) ~ .label {
-            transform: translateY(-4.5rem); }
-          .fifth-section .row-box .right-row form input:not(:placeholder-shown) ~ .label {
-            color: var(--color-dark-blue);
-            transform: translateY(-4.5rem); }
-          .fifth-section .row-box .right-row form input:focus ~ .label {
-            color: orange; }
-        .fifth-section .row-box .right-row form .text-area {
-          transform: translateY(-11rem); }
-        .fifth-section .row-box .right-row form textarea {
-          width: 100%;
-          padding-top: 0;
-          vertical-align: top;
-          padding: 2rem;
-          resize: none;
-          border: .6px solid #345c86;
-          border-radius: .5rem; }
-          .fifth-section .row-box .right-row form textarea:focus ~ .text-area,
-          .fifth-section .row-box .right-row form textarea input:not(:placeholder-shown) ~ .text-area {
-            transform: translateY(-16rem); }
-          .fifth-section .row-box .right-row form textarea:not(:placeholder-shown) ~ .text-area {
-            color: var(--color-dark-blue);
-            transform: translateY(-16rem); }
-          .fifth-section .row-box .right-row form textarea:focus ~ .text-area {
-            color: orange; }
+          padding-bottom: 1rem; }
+          .fifth-section .row-box .right-row form .col .error-text-1,
+          .fifth-section .row-box .right-row form .col .error-text-2,
+          .fifth-section .row-box .right-row form .col .error-text-3 {
+            display: flex;
+            position: absolute;
+            left: 0;
+            text-align: start;
+            align-self: flex-start;
+            font-family: inherit;
+            color: red;
+            font-size: 1.4rem; }
+          .fifth-section .row-box .right-row form .col .label,
+          .fifth-section .row-box .right-row form .col .text-area {
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 1;
+            position: absolute;
+            margin-left: 2rem;
+            left: 0;
+            transition: all .3s;
+            transition: transform 200ms, color 200ms; }
+          .fifth-section .row-box .right-row form .col ::placeholder {
+            color: transparent;
+            padding: 2rem; }
+          .fifth-section .row-box .right-row form .col input {
+            display: flex;
+            border: 0.6px solid var(--color-dark-blue);
+            border-radius: .5rem;
+            width: 100%;
+            height: 5rem;
+            padding: 2rem; }
+            .fifth-section .row-box .right-row form .col input:focus ~ .label,
+            .fifth-section .row-box .right-row form .col input input:not(:placeholder-shown) ~ .label {
+              transform: translateY(-4.5rem); }
+            .fifth-section .row-box .right-row form .col input:not(:placeholder-shown) ~ .label {
+              color: var(--color-dark-blue);
+              transform: translateY(-4.5rem); }
+            .fifth-section .row-box .right-row form .col input:focus ~ .label {
+              color: orange; }
+          .fifth-section .row-box .right-row form .col .text-area {
+            display: flex;
+            transform: translateY(-11rem); }
+          .fifth-section .row-box .right-row form .col textarea {
+            display: flex;
+            width: 100%;
+            padding-top: 0;
+            vertical-align: top;
+            padding: 2rem;
+            resize: none;
+            border: .6px solid #345c86;
+            border-radius: .5rem; }
+            .fifth-section .row-box .right-row form .col textarea:focus ~ .text-area,
+            .fifth-section .row-box .right-row form .col textarea input:not(:placeholder-shown) ~ .text-area {
+              transform: translateY(-16rem); }
+            .fifth-section .row-box .right-row form .col textarea:not(:placeholder-shown) ~ .text-area {
+              color: var(--color-dark-blue);
+              transform: translateY(-16rem); }
+            .fifth-section .row-box .right-row form .col textarea:focus ~ .text-area {
+              color: orange; }
         .fifth-section .row-box .right-row form button {
           width: 100%;
           height: 5rem;
