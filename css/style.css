@@ -21,11 +21,9 @@
 
 @keyframes slide-certfications {
   0%, 5%, 95%, 100% {
-    bottom: 0;
-    transform: translate(0, 0); }
+    transform: scale(1, 1); }
   45%, 55% {
-    bottom: 100%;
-    transform: translate(0.3%, -2%); } }
+    transform: scale(1.01, 1.01); } }
 
 :root {
   --color-light-blue-1: #378ce6;
@@ -343,6 +341,9 @@ nav a.active {
   width: 9.2rem;
   gap: 1rem;
   transition: all 0.4s ease; }
+  @media (max-width: 37.5em) {
+    nav a.active {
+      animation: 1s slide-botton ease forwards .1s; } }
 
 nav a.active:hover {
   transform: scale(1.1, 1.1);
@@ -363,6 +364,9 @@ nav a:before {
   transform: translateX(-50%);
   background: var(--color-light-blue-1);
   transition: all 0.4s ease; }
+  @media (max-width: 37.5em) {
+    nav a:before {
+      background-color: white; } }
 
 nav a:hover:before {
   width: 100%; }
@@ -844,8 +848,7 @@ nav a:hover:before {
     transform: skewY(-2deg);
     transition: ease-in-out 0.3s;
     font-family: inherit;
-    font-size: inherit;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; }
+    font-size: inherit; }
     .third-section .skill-section .skill-box {
       display: flex;
       flex-direction: column;
@@ -854,7 +857,8 @@ nav a:hover:before {
       padding: 2rem 6rem 7rem 6rem;
       background-color: var(--color-medium-background);
       height: 100%;
-      border: .7rem solid white; }
+      border: .7rem solid white;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; }
       .third-section .skill-section .skill-box .title {
         display: flex;
         flex-direction: row;
@@ -908,17 +912,13 @@ nav a:hover:before {
         width: 100%;
         position: relative;
         margin: 0 .5rem; }
-        .third-section .box-row:hover {
-          width: 100%; }
-          .third-section .box-row:hover .skill-section {
-            left: 0 !important;
-            height: auto;
-            padding: 0; }
-            .third-section .box-row:hover .skill-section .skill-box {
-              padding: 1rem;
-              padding-bottom: 10rem; }
-              .third-section .box-row:hover .skill-section .skill-box .technologies {
-                margin: 1rem 0; }
+        .third-section .box-row:hover .skill-section {
+          left: 0 !important;
+          height: 100%; }
+          .third-section .box-row:hover .skill-section .skill-box {
+            padding: 4rem 3rem; }
+            .third-section .box-row:hover .skill-section .skill-box .technologies {
+              margin: 2rem 0; }
       .third-section .middle-section {
         align-items: center;
         width: 100%; }
@@ -967,28 +967,34 @@ nav a:hover:before {
             text-transform: uppercase; }
       .third-section .skill-section {
         display: none;
-        padding: 0;
-        margin: 0;
+        padding: 0 1rem;
         width: 100%;
-        height: auto;
-        left: 0;
+        height: 100%;
+        left: auto;
         z-index: 4;
         transform: skewY(0deg); } }
+    @media screen and (max-width: 37.5em) and (min-width: 500px) and (max-width: 600px) {
+      .third-section .skill-section {
+        padding: 0 5rem; } }
     @media (max-width: 37.5em) and (max-width: 37.5em) {
       .third-section .skill-section {
-        left: 0; } }
+        left: auto; } }
   @media (max-width: 37.5em) {
         .third-section .skill-section:hover {
-          left: 0 !important; }
+          left: 0 !important;
+          transform: scale(1, 1); }
         .third-section .skill-section .skill-box {
           display: block;
           align-items: center;
           justify-content: center;
           padding: 4rem 1rem;
-          width: 100%;
           height: 91%;
           background-color: var(--color-medium-background);
-          border: .7rem solid white; }
+          border: .7rem solid white; } }
+      @media screen and (max-width: 37.5em) and (min-width: 500px) and (max-width: 600px) {
+        .third-section .skill-section .skill-box {
+          padding: 4rem 3rem; } }
+  @media (max-width: 37.5em) {
           .third-section .skill-section .skill-box .title {
             display: flex;
             flex-direction: row;
@@ -1000,15 +1006,14 @@ nav a:hover:before {
               width: auto; }
             .third-section .skill-section .skill-box .title .bi-arrow-bar-down {
               display: flex;
-              justify-content: flex-end;
               align-self: start;
-              left: 5rem;
+              left: 4.5rem;
               fill: black;
-              top: 1rem;
+              top: 2rem;
               color: black;
-              width: 2.5rem;
+              width: 3.5rem;
               padding: 0;
-              height: 2.5rem; }
+              height: 3.5rem; }
               .third-section .skill-section .skill-box .title .bi-arrow-bar-down path {
                 transform: rotate(180deg);
                 transform-origin: 50% 50%; }
@@ -1016,7 +1021,7 @@ nav a:hover:before {
           padding: auto;
           width: 100%;
           border: .3rem solid white;
-          margin: 1rem 0;
+          margin: 2rem 0;
           box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; }
           .third-section .skill-section .technologies:hover {
             transform: scale(1, 1);

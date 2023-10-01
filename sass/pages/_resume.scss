@@ -115,8 +115,7 @@
         font-family: inherit;
         font-size: inherit;
 
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      
 
 
         .skill-box {
@@ -128,6 +127,9 @@
             background-color: var(--color-medium-background);
             height: 100%;
             border: .7rem solid white;
+
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
 
             .title {
@@ -224,19 +226,17 @@
            
 
             &:hover {
-                width: 100%;
+                // width: 100%;
 
                 .skill-section {
                     left: 0 !important;
-                    height: auto;
-                    padding: 0;
-    
+                    height: 100%;
+                   
                     .skill-box {
-                        padding: 1rem;
-                        padding-bottom: 10rem;
+                        padding: 4rem 3rem ; 
     
                         .technologies {
-                            margin: 1rem 0;
+                            margin: 2rem 0;
                         }
                     }
     
@@ -280,6 +280,7 @@
             align-items: center;
             position: relative;
 
+          
 
             &__box {
                 display: flex;
@@ -290,7 +291,7 @@
                 height: 6rem;
                 bottom: 1rem;
 
-
+              
                 & .bi-arrow-bar-up {
                     display: flex;
                     align-items: center;
@@ -312,37 +313,49 @@
                 
                 }
             }
+
+    
+
         }
         .skill-section {
             display: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: auto;
-            left: 0;
+            padding: 0 1rem;
+          
+            width: 100%; 
+            height: 100%;
+            left: auto;
             z-index: 4;
             transform: skewY(0deg);
 
+            @media screen and (min-width: 500px) and (max-width: 600px) {
+                padding: 0 5rem ; 
+                  }
+
             @include respond(phone) {
-                left: 0;
+                left: auto;
+                
             }
+
+         
 
             &:hover {
                 left: 0 !important;
+                transform: scale(1,1);
             }
 
             .skill-box {
                 display: block;
                 align-items: center;
                 justify-content: center;
-
                 padding: 4rem 1rem;
-                width: 100%;
                 height: 91%;
                 background-color: var(--color-medium-background);
 
                 border: .7rem solid white;
 
+                @media screen and (min-width: 500px) and (max-width: 600px) {
+                    padding: 4rem 3rem ; 
+                }
 
                 .title {
                     display: flex;
@@ -362,17 +375,16 @@
                     
                     & .bi-arrow-bar-down {
                         display: flex;
-                        justify-content: flex-end;
                         align-self: start;
 
-                        left: 5rem;
+                        left: 4.5rem;
 
                         fill: black;
-                        top: 1rem;
+                        top: 2rem;
                         color: black;
-                        width: 2.5rem;
+                        width: 3.5rem;
                         padding: 0;
-                        height: 2.5rem;
+                        height: 3.5rem;
                          & path {
                             transform: rotate(180deg);
                             transform-origin: 50% 50%;
@@ -382,15 +394,14 @@
             }
 
             .technologies {
-
                 padding: auto;
                 width: 100%;
                 border: .3rem solid white;
-                margin: 1rem 0;
+                margin: 2rem 0;
                 box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
                 &:hover {
-                    transform: scale(1.0, 1.0);
+                    transform: scale(1,1);
                     transition: ease-in-out 0.3s;
                 }
 
