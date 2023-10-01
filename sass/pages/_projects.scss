@@ -118,6 +118,7 @@
                 -moz-transition: all .4s ease;
                 -o-transition: all .4s ease;
                 transition: all .4s ease;
+               
 
                 position: relative;
 
@@ -297,7 +298,11 @@
                 margin: 0 1rem;
 
                 &:hover {
-                    margin: 0 2rem;
+                    margin: 0 8rem;
+                    transform: scale(1.05,1.02) skew(-3deg);
+                    z-index: 4;
+
+
                 }
             }
         }
@@ -317,6 +322,7 @@
     
                 &:not(:nth-child(5)) {
                     margin: 1rem 0;
+              
                 }
             }
         }
