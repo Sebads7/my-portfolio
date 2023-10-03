@@ -165,11 +165,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10rem;
+        padding: 6rem 0;
         color: white;
         transform: skew(-5deg);
         font-size: 4rem;
-        font-weight: 700;
+        font-weight: 600;
+
+        pointer-events: none;
+
+        @include respond(phone) {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 4rem;
+         }
     }
 
     .first-text {
@@ -181,6 +190,8 @@
         height: 4rem;
         color: white;
 
+        
+        pointer-events: none;
 
         transition: all ease 0.5s;
         font-size: 1em;
@@ -188,14 +199,14 @@
     }
 
     @include respond(phone) {
-        & h2{
-            transform: skew(0deg); 
+        & h2 {
+            transform: skew(0deg);
+           
         }
     }
 }
 
 // THIRD-SECTION RESUME//////
-
 
 .box-row {
     font-size: 1.5rem;
@@ -203,28 +214,36 @@
 
     .top-section {
         & h2 {
+            text-transform: uppercase;
             font-size: 4rem;
             font-weight: 600;
             color: white;
+
+            @include respond(phone) {
+               color: var(--color-light-blue);
+               font-family: sans-serif;
+               text-transform: uppercase;
+               font-weight: 700;
+               font-size: 4rem;
+            }
         }
     }
 
     .left-row {
 
-        .title {
-            width: 90%;
-        }
-
         & h2 {
             font-size: 3.5rem;
             text-transform: uppercase;
             font-weight: 600;
+            font-family: inherit;
         }
+
 
         .education,
         .certification,
-        .work-exp,
+        
         a {
+            
             display: flex;
             flex-direction: column;
             margin: 5rem 0;
@@ -236,7 +255,7 @@
                 margin: .5rem 0;
                 font-size: 1.7rem;
                 font-weight: 400;
-                color: #292d73;
+                color: var(--color-dark-blue);
 
                 & span {
                     font-weight: 500;
@@ -282,7 +301,6 @@
         }
     }
 
-
     .last-row {
         margin-bottom: 7rem;
 
@@ -290,62 +308,4 @@
             line-height: 5rem;
         }
     }
-
-
-
-    @include respond(phone) {
-        .left-row {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .title {
-                width: auto;
-                align-items: center;
-               
-            }
-
-            .education,
-            .certification,
-            .work-exp,
-            a {
-                display: flex;
-                text-align: center;
-                width: auto;
-                align-items: center;
-                margin: 2rem 0;
-
-                & a>p:first-child {
-                    text-align: center;
-                    border: 1px solid orange;
-                    background-color: orange;
-                    color: white;
-                    border-radius: 1rem;
-                    padding: 1rem 2rem;
-
-                    animation: 3s slide-certfications ease-in-out forwards 1s infinite;
-                    transition: all 0.4s ease;
-
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                }
-
-                & p,
-                a {
-                    width: 38rem;
-
-                    & span {
-                        font-weight: 500;
-                        color: orange;
-                    }
-                }
-
-                & p:last-child {
-                        width: auto;
-                }
-            }
-        }
-    }
-
-
 }
