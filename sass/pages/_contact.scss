@@ -1,0 +1,392 @@
+.fifth-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 120rem;
+    background-color: var(--color-light-blue);
+
+    font-size: 1.5rem;
+    font-family: inherit;
+
+    ////////////////////////////// code for phone 
+    @include respond(phone) {
+        height: 100%;
+        width: auto;
+        padding: 10rem 0;
+    }
+
+    ////////////////////////////
+    /// 
+    /// 
+    @include respond(tab-port) {
+        height: 100%;
+        width: auto;
+        padding: 10rem 0;
+    }
+
+    .row-box {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        ///////////////////////////// code for phone 
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        ////////////////////////////
+
+
+        & .left-contact {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            line-height: 7rem;
+
+            ////////////////////////////// code for phone 
+            @include respond(phone) {
+                width: 100%;
+
+                & h2 {
+                    margin-bottom: 3rem;
+                }
+
+                .sub-title {
+                    display: flex;
+                    line-height: 4rem;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
+            //////////////////////////
+            /// 
+            /// 
+            /// 
+            @include respond(tab-port) {
+                width: 100%;
+
+                & h2 {
+                    margin-bottom: 3rem;
+                }
+
+                .sub-title {
+                    display: flex;
+                    line-height: 4rem;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
+            & h2 {
+
+                font-size: 4rem;
+                font-weight: 600;
+            }
+
+            & h3 {
+                font-size: 2.5rem;
+                font-weight: 300;
+            }
+
+            & p {
+                font-size: 2rem;
+                font-weight: 300;
+
+            }
+
+            & .row-1 {
+                display: flex;
+                flex-direction: row;
+                gap: 10rem;
+                padding: 10rem 0;
+
+                // code for phone 
+                @include respond(phone) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                ////////////////////////////
+
+                & .email-row,
+                .phone-row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+
+        ///////////////////     RIGHT SECTION ///////////////////////
+
+        & .right-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: auto;
+            padding: 1rem 5rem;
+
+
+            @include respond(tab-port) {
+                width: 100%;
+                padding: 1rem 4rem;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+                padding: .9rem .5rem;
+            }
+
+            & form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                width: 60rem;
+                height: 100%;
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transition: ease-in-out 0.3s;
+                padding: 5rem 4rem;
+
+                @include respond(big-desktop) {
+                    width: 55rem;
+                    padding: 5rem 6rem;
+                }
+
+                @include respond(tab-land) {
+                    width: 50rem;
+                }
+
+                /////////////////////////////// code for phone 
+                @include respond(phone) {
+                    width: 90%;
+                  
+                    padding: 2rem 4rem;
+                }
+
+                //////////////////////////  
+
+                &:hover {
+                    transform: scale(1.04, 1.06);
+                    transition: ease-in-out 0.3s;
+
+                    ////////////////////////////// code for phone 
+                    @include respond(phone) {
+                        transform: scale(1.0, 1.0);
+                    }
+
+                    ////////////////////////////
+                }
+
+                & h2 {
+                    color: red;
+                    font-size: 3rem;
+                    font-weight: 300;
+                    color: var(--color-dark-blue);
+                    line-height: 1rem;
+                    margin-bottom: 6rem;
+                    margin-top: 4rem;
+                }
+
+                & .col {
+                    margin: 2rem 0;
+                    display: flex;
+                    position: relative;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100%;
+                    padding-bottom: 1rem;
+
+                 
+                & .error-div{
+                    position: relative;
+                    padding: .2rem 0 1rem 0 ;
+                    & .error-text-1,
+                    .error-text-2,
+                    .error-text-3 {
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        text-align: start;
+                        align-self: flex-start;
+                        font-family: inherit;
+                        color: red;
+                        font-size: 1.4rem;
+                    }
+                }    
+
+                & .label{
+                    transform: translateY(-.7rem);
+                }
+           
+
+                & .label,
+                .text-area {
+                    display: flex;
+                    justify-content: center;
+
+                    pointer-events: none;
+                    z-index: 1;
+                    position: absolute;
+                    margin-left: 2rem;
+                    left: 0;
+                    transition: all .3s;
+                    transition: transform 200ms, color 200ms;
+                }
+
+                & ::placeholder {
+                    color: transparent;
+                    padding: 2rem;
+                }
+
+                & input {
+                    border: .6px solid var(--color-dark-blue);
+                    border-radius: .5rem;
+                    width: 100%;
+                    height: 5rem;
+                    padding: 2rem;
+                    padding-bottom: auto;
+
+                    &:focus~.label,
+                    input:not(:placeholder-shown)~.label {
+                        transform: translateY(-4.5rem);
+                    }
+
+                    &:not(:placeholder-shown)~.label {
+                        color: var(--color-dark-blue);
+                        transform: translateY(-4.5rem);
+                    }
+
+                    &:focus~.label {
+                        color: orange;
+                    }
+                }
+
+                .text-area {
+                    display: flex;
+                    transform: translateY(-11rem);
+                }
+
+                & textarea {
+                    display: flex;
+                    width: 100%;
+                    padding-top: 0;
+                    vertical-align: top;
+                    padding: 2rem;
+                    resize: none;
+                    border: .6px solid #345c86;
+                    border-radius: .5rem;
+
+                    &:focus~.text-area,
+                    input:not(:placeholder-shown)~.text-area {
+                        transform: translateY(-16rem);
+                    }
+
+                    &:not(:placeholder-shown)~.text-area {
+                        color: var(--color-dark-blue);
+                        transform: translateY(-16rem);
+                    }
+
+                    &:focus~.text-area {
+                        color: orange;
+                    }
+                }
+
+
+                }
+
+
+
+                & button {
+                    width: 100%;
+                    height: 5rem;
+                    background-color: #345c86;
+                    color: white;
+                    border: none;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    margin: 1.5rem 0;
+
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        transition: ease-in-out 0.3s;
+
+                        // code for phone 
+                        @include respond(phone) {
+                            transform: scale(1.0, 1.0);
+                        }
+
+                        //////////////////////////// 
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.footer-container {
+    justify-content: space-between;
+    background-color: #345c86;
+
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 15rem;
+        box-shadow: rgba(50, 50, 93, 0.1) 0px 30px 60px -12px;
+
+        // code for phone 
+        @include respond(phone) {
+            padding: 3rem 1rem 5rem 1rem;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 2rem;
+        }
+
+        ////////////////////////////
+
+
+        & p,
+        a {
+            font-size: 2rem;
+            font-weight: 300;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+
+            // code for phone 
+            @include respond(phone) {
+                & p {
+                    text-align: center;
+                }
+            }
+
+            ////////////////////////////
+        }
+    }
+}

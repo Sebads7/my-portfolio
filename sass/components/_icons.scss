@@ -1,0 +1,55 @@
+.bi {
+    color: #666666;
+    padding-right: 1.5rem;
+
+    &__linkedIn {
+        color: #007bff;
+    }
+
+
+    &-envelope-paper,
+    &-phone--contact {
+        color: white;
+        width: 12rem;
+        height: 6rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & svg {
+        color: orange;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+        padding-right: 2rem;
+
+        width: 5em;
+        height: 5em;
+
+        @include respond(phone) {
+            width: 4em;
+            height: 4em;
+        }
+    }
+
+    .icon-certificate {
+        width: 6em;
+        height: 6em;
+        stroke-width: 3%;
+        transform: translateY(.2rem);
+    }
+
+    .icon-skills {
+        width: 5em;
+        height: 5em;
+        color: #f0f1f6;
+    }
+
+}

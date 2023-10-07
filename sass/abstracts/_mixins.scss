@@ -1,0 +1,61 @@
+
+
+@keyframes slideIn {
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-Back-In{
+    
+
+    0%, 5%, 95%, 100% { 
+        bottom: 0;
+        transform: translate(0, 0);
+    }
+    45%, 55% {
+        bottom: 100%;
+        transform: translate(0, -100%);
+    }
+  }
+
+  @keyframes slide-botton{
+
+   0%, 45%, 55% {
+       
+        transform: translate(0, -20%);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+  }
+
+  @keyframes slide-certfications{
+
+    0%, 5%, 95%, 100% { 
+       
+        transform: scale(1.0, 1.0);
+    }
+    45%, 55% {
+      
+        transform: scale(1.01, 1.01);
+    }
+  }
+
+
+
+  @mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content}; //600px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {@content}; // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {@content}; //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {@content}; //1800px
+    }
+    }

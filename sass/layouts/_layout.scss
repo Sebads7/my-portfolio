@@ -1,0 +1,325 @@
+.top-bar a {
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    font-size: 1.6rem;
+
+    @include respond(phone) {
+        font-size: 1.8rem;
+    }
+}
+
+.nav-container {
+    h2 {
+        text-transform: uppercase;
+        position: relative;
+        color: white;
+        -webkit-text-stroke: 0.1vw var(--color-light-blue-1);
+        font-size: 3rem;
+        font-weight: 900;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            color: var(--color-light-blue-1);
+            -webkit-text-stroke: none;
+        }
+
+    }
+
+    h2::before {
+        content: attr(data-text);
+        white-space: nowrap;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: var(--color-light-blue-1);
+        -webkit-text-stroke: 0vw var(--color-light-blue-1);
+
+        overflow: hidden;
+        animation: animate 2s linear 4.5s;
+
+        @include respond(phone) {
+            display: none;
+        }
+
+    }
+
+    @keyframes animate {
+
+        0% {
+            width: 0%;
+            box-shadow: hsla(232, 66%, 53%, 0.8) 5px 0,
+                rgba(58, 71, 153, 0.1) 6px 0;
+        }
+
+        100% {
+            width: 100%;
+            box-shadow: rgba(57, 78, 214, 0.8) 5px 0,
+                rgba(58, 71, 153, 0.1) 6px 0;
+
+
+        }
+    }
+
+
+
+    &__list,
+    ul,
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        list-style: none;
+        color: var(--color-dark-gray);
+        text-decoration: none;
+
+        @media only screen and (max-width: 1200px) {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+
+
+//FIRST SECTION HOME /////////
+
+
+.first-section {
+    &__text-intro {
+        display: flex;
+        flex-direction: column;
+        font-size: 6.5rem;
+        font-weight: 900;
+
+
+        & span {
+            font-size: 5.5rem;
+            font-weight: 300;
+
+
+            & span {
+
+                color: var(--color-light-blue-1);
+                text-transform: capitalize;
+                font-weight: bold;
+
+            }
+        }
+    }
+
+    &__second-txt {
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        color: #666666;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+
+    }
+
+    &__btn {
+
+        & a {
+            font-weight: 400;
+            word-spacing: .2rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: var(--color-light-blue-1);
+
+
+
+        }
+    }
+
+
+    @include respond(phone) {
+
+        &__text-intro {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            & span {
+                font-size: 5.5rem;
+                font-weight: 300;
+
+
+                & span {
+
+                    color: var(--color-light-blue-1);
+                    text-transform: capitalize;
+                    font-weight: bold;
+
+                }
+            }
+        }
+    }
+}
+
+// SECOND-SECTION PROJECTS//////
+
+
+.second-section {
+
+    & h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1.5px solid var(--color-light-gray);
+        padding: .6rem 8rem;
+
+        color: white;
+        transform: skew(-4deg);
+        font-size: 4rem;
+        font-weight: 600;
+
+        @include respond(phone) {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 4rem;
+
+            border: none;
+            padding: .6rem 8rem;
+         }
+    }
+
+    .first-text {
+        font-size: 2rem;
+        padding: 1rem 1rem;
+        width: 100%;
+        height: 4rem;
+        color: white;
+
+        font-size: 1em;
+    }
+
+    @include respond(phone) {
+        & h2 {
+            transform: skew(0deg);
+           
+        }
+    }
+}
+
+// THIRD-SECTION RESUME//////
+
+.box-row {
+    font-size: 1.5rem;
+    font-family: inherit;
+
+    .top-section {
+        & h2 {
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 600;
+            color: white;
+
+            @include respond(phone) {
+               color: var(--color-light-blue);
+               font-family: sans-serif;
+               text-transform: uppercase;
+               font-weight: 700;
+               font-size: 4rem;
+            }
+        }
+    }
+
+    .left-row {
+
+        & h2 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: inherit;
+
+            @include respond(phone) {
+                color: white;
+             }
+        }
+
+
+        .education,
+        .certification,
+        
+        a {
+            
+            display: flex;
+            flex-direction: column;
+            margin: 5rem 0;
+            text-decoration: none;
+            transition: all ease .2s;
+
+            @include respond(phone) {
+                
+                color: white;
+             }
+
+            & p,
+            a {
+                margin: .5rem 0;
+                font-size: 1.7rem;
+                font-weight: 400;
+                color: var(--color-dark-blue);
+
+                @include respond(phone) {
+                    color: white;
+                 }
+
+                & span {
+                    font-weight: 500;
+                    color: orange;
+                }
+            }
+
+            & p:last-child {
+                color: rgb(64, 62, 62);
+                
+                @include respond(phone) {
+                    color: #fff;
+                 }
+            }
+        }
+    }
+
+    .skill-section {
+        & h3 {
+            display: flex;
+            justify-content: center;
+            width: 40%;
+            font-size: 3.8rem;
+            text-transform: uppercase;
+            color: #0E2954;
+
+        }
+
+        & h4 {
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 300;
+            color: #292d73;
+            text-transform: uppercase;
+            margin-top: .1rem;
+            margin-bottom: 1rem;
+        }
+
+        .technologies {
+            & p {
+                margin: .8rem 0;
+                font-size: 1.7rem;
+                color: white;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .last-row {
+        margin-bottom: 7rem;
+
+        & p:last-child {
+            line-height: 5rem;
+        }
+    }
+}
