@@ -3,7 +3,7 @@
     text-decoration: none;
     font-size: 1.6rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
         font-size: 1.8rem;
     }
 }
@@ -40,26 +40,7 @@
         @include respond(phone) {
             display: none;
         }
-
     }
-
-    @keyframes animate {
-
-        0% {
-            width: 0%;
-            box-shadow: hsla(232, 66%, 53%, 0.8) 5px 0,
-                rgba(58, 71, 153, 0.1) 6px 0;
-        }
-
-        100% {
-            width: 100%;
-            box-shadow: rgba(57, 78, 214, 0.8) 5px 0,
-                rgba(58, 71, 153, 0.1) 6px 0;
-
-
-        }
-    }
-
 
 
     &__list,
@@ -70,13 +51,8 @@
         list-style: none;
         color: var(--color-dark-gray);
         text-decoration: none;
-
-        @media only screen and (max-width: 1200px) {
-            font-size: 1.3rem;
-        }
     }
 }
-
 
 
 //FIRST SECTION HOME /////////
@@ -89,18 +65,25 @@
         font-size: 6.5rem;
         font-weight: 900;
 
+        @include respond(tab-port) {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 10rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 2rem;
+          }
 
         & span {
             font-size: 5.5rem;
             font-weight: 300;
 
-
             & span {
-
                 color: var(--color-light-blue-1);
                 text-transform: capitalize;
                 font-weight: bold;
-
             }
         }
     }
@@ -132,28 +115,7 @@
     }
 
 
-    @include respond(phone) {
 
-        &__text-intro {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-
-            & span {
-                font-size: 5.5rem;
-                font-weight: 300;
-
-
-                & span {
-
-                    color: var(--color-light-blue-1);
-                    text-transform: capitalize;
-                    font-weight: bold;
-
-                }
-            }
-        }
-    }
 }
 
 // SECOND-SECTION PROJECTS//////
@@ -174,12 +136,11 @@
         font-size: 4rem;
         font-weight: 600;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             font-family: sans-serif;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 4rem;
-
             border: none;
             padding: .6rem 8rem;
          }
@@ -195,7 +156,7 @@
         font-size: 1em;
     }
 
-    @include respond(phone) {
+    @include respond(tab-port) {
         & h2 {
             transform: skew(0deg);
            
@@ -216,8 +177,8 @@
             font-weight: 600;
             color: white;
 
-            @include respond(phone) {
-               color: var(--color-light-blue);
+            @include respond(tab-port) {
+               color: var(--color-dark-blue);
                font-family: sans-serif;
                text-transform: uppercase;
                font-weight: 700;
@@ -234,7 +195,7 @@
             font-weight: 600;
             font-family: inherit;
 
-            @include respond(phone) {
+            @include respond(tab-port) {
                 color: white;
              }
         }
@@ -251,8 +212,7 @@
             text-decoration: none;
             transition: all ease .2s;
 
-            @include respond(phone) {
-                
+            @include respond(tab-port) {
                 color: white;
              }
 
@@ -263,7 +223,7 @@
                 font-weight: 400;
                 color: var(--color-dark-blue);
 
-                @include respond(phone) {
+                @include respond(tab-port){
                     color: white;
                  }
 
@@ -276,7 +236,7 @@
             & p:last-child {
                 color: rgb(64, 62, 62);
                 
-                @include respond(phone) {
+                @include respond(tab-port){
                     color: #fff;
                  }
             }

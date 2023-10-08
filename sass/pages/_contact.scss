@@ -11,16 +11,6 @@
     font-size: 1.5rem;
     font-family: inherit;
 
-    ////////////////////////////// code for phone 
-    @include respond(phone) {
-        height: 100%;
-        width: auto;
-        padding: 10rem 0;
-    }
-
-    ////////////////////////////
-    /// 
-    /// 
     @include respond(tab-port) {
         height: 100%;
         width: auto;
@@ -38,13 +28,6 @@
             flex-direction: column;
         }
 
-        ///////////////////////////// code for phone 
-        @include respond(phone) {
-            flex-direction: column;
-        }
-
-        ////////////////////////////
-
 
         & .left-contact {
             color: white;
@@ -56,25 +39,6 @@
             line-height: 7rem;
 
             ////////////////////////////// code for phone 
-            @include respond(phone) {
-                width: 100%;
-
-                & h2 {
-                    margin-bottom: 3rem;
-                }
-
-                .sub-title {
-                    display: flex;
-                    line-height: 4rem;
-                    flex-direction: column;
-                    width: 100%;
-                }
-            }
-
-            //////////////////////////
-            /// 
-            /// 
-            /// 
             @include respond(tab-port) {
                 width: 100%;
 
@@ -89,6 +53,7 @@
                     width: 100%;
                 }
             }
+
 
             & h2 {
 
@@ -152,7 +117,6 @@
             }
 
             @include respond(phone) {
-                width: 100%;
                 padding: .9rem .5rem;
             }
 
@@ -162,7 +126,7 @@
                 align-items: center;
                 flex-direction: column;
 
-                width: 60rem;
+                width: 40vw;
                 height: 100%;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -170,18 +134,18 @@
                 padding: 5rem 4rem;
 
                 @include respond(big-desktop) {
-                    width: 55rem;
-                    padding: 5rem 6rem;
+                    width: 60rem;
+                    padding: 5rem 4rem;
                 }
 
-                @include respond(tab-land) {
-                    width: 50rem;
+                @include respond(tab-port) {
+                    width: 65vw;
+                    padding: 5rem 4rem;
                 }
 
                 /////////////////////////////// code for phone 
                 @include respond(phone) {
-                    width: 90%;
-                  
+                    width: 80vw;
                     padding: 2rem 4rem;
                 }
 
@@ -192,7 +156,7 @@
                     transition: ease-in-out 0.3s;
 
                     ////////////////////////////// code for phone 
-                    @include respond(phone) {
+                    @include respond(tab-port) {
                         transform: scale(1.0, 1.0);
                     }
 
@@ -312,8 +276,6 @@
                         color: orange;
                     }
                 }
-
-
                 }
 
 
@@ -333,7 +295,7 @@
                         transition: ease-in-out 0.3s;
 
                         // code for phone 
-                        @include respond(phone) {
+                        @include respond(tab-port) {
                             transform: scale(1.0, 1.0);
                         }
 
@@ -360,6 +322,10 @@
         padding: 2rem 15rem;
         box-shadow: rgba(50, 50, 93, 0.1) 0px 30px 60px -12px;
 
+        @include respond(tab-port) {
+            padding: 2rem 5rem;
+        }
+
         // code for phone 
         @include respond(phone) {
             padding: 3rem 1rem 5rem 1rem;
@@ -380,7 +346,7 @@
             text-align: center;
 
             // code for phone 
-            @include respond(phone) {
+            @include respond(tab-port) {
                 & p {
                     text-align: center;
                 }

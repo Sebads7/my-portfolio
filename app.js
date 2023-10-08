@@ -121,59 +121,25 @@ RemoveError();
 /////////////////////////////s/////
 
 
-
+const openSkills = () => {
 // create a function when i click icon-skills, it change skill-section to display block
 const iconSkills = document.querySelector(".open-skills");
-const skillshowHide = document.querySelector(".open-skills");
 const skillSection = document.querySelector(".skill-section");
 const closeSkills = document.querySelector(".close-skills");
+const middleSection = document.querySelector(".box-left");
 
 iconSkills.addEventListener("click", () => {
-  skillSection.style.display = "block";
-  skillshowHide.style.display = "none";
-
-
+  skillSection.style.display = "flex";
   // if click on close-skills  skillSelection display none
   closeSkills.addEventListener("click", () => {
     skillSection.style.display = "none";
-    skillshowHide.style.display = "block";
-
   })
-  
 });
 
 
+}
 
-
-// // when mouse enter on each box add skew -3deg
-// const box = document.querySelectorAll(".box");
-// const insideBox = document.querySelectorAll(".inside-box");
-// //for each box add event listener mouseenter
-// box.forEach((box) => {
-//   box.addEventListener("mouseenter", () => {
-//     box.style.transform = "skew(-3deg)";
-   
-//   });
-
-//   // after mouse leave  reset skew to 0
-//   box.addEventListener("mouseleave", () => {
-//     box.style.transform = "skew(0)";
-//   });
-// });
-
-
-// // when mobile scroll down, .box scale 1.1
-// const box = document.querySelectorAll(".box");
-// const insideBox = document.querySelectorAll(".inside-box");
-// const boxContainer = document.querySelector(".box-container");
-
-// boxContainer.addEventListener("scroll", () => {
-//   box.forEach((box) => {
-//     box.style.transform = "scale(1.1)";
-//   });
-// } 
-// );
-
+openSkills();
 
 // const gallery = () => {
 

@@ -43,6 +43,23 @@
     }
   }
 
+  @keyframes animate {
+
+    0% {
+        width: 0%;
+        box-shadow: hsla(232, 66%, 53%, 0.8) 5px 0,
+            rgba(58, 71, 153, 0.1) 6px 0;
+    }
+
+    100% {
+        width: 100%;
+        box-shadow: rgba(57, 78, 214, 0.8) 5px 0,
+            rgba(58, 71, 153, 0.1) 6px 0;
+
+
+    }
+}
+
 
 
   @mixin respond($breakpoint){
