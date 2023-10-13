@@ -33,6 +33,12 @@
             margin: 0 .5rem;
         }
 
+
+        @include respond(phone) {
+         
+            margin: 1rem .5rem 0 .5rem;
+        }
+
         &:hover {
             width: 100%;
             transition: ease-in-out 0.3s;

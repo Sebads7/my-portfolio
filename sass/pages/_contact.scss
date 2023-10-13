@@ -145,7 +145,7 @@
 
                 /////////////////////////////// code for phone 
                 @include respond(phone) {
-                    width: 80vw;
+                    width: 90vw;
                     padding: 2rem 4rem;
                 }
 
@@ -232,6 +232,10 @@
                     padding: 2rem;
                     padding-bottom: auto;
 
+                    @include respond(tab-port) {
+                        border: 1px solid #345c86;                       
+                    }
+
                     &:focus~.label,
                     input:not(:placeholder-shown)~.label {
                         transform: translateY(-4.5rem);
@@ -262,19 +266,33 @@
                     border: .6px solid #345c86;
                     border-radius: .5rem;
 
+                    @include respond(tab-port) {
+                        border: 1px solid #345c86;                       
+                    }
+
                     &:focus~.text-area,
                     input:not(:placeholder-shown)~.text-area {
-                        transform: translateY(-16rem);
+                        transform: translateY(-16.4rem);
+
+                        @include respond(tab-port) {
+                                transform: translateY(-15rem);
+                            }
                     }
 
                     &:not(:placeholder-shown)~.text-area {
                         color: var(--color-dark-blue);
-                        transform: translateY(-16rem);
+                        transform: translateY(-16.4rem);
+
+                        @include respond(tab-port) {
+                            transform: translateY(-15rem);
+                        }
                     }
 
                     &:focus~.text-area {
                         color: orange;
                     }
+
+                
                 }
                 }
 

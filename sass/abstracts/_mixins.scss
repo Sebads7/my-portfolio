@@ -8,28 +8,41 @@
   }
 
   @keyframes slide-Back-In{
-    
 
     0%, 5%, 95%, 100% { 
+        opacity: 100%;
         bottom: 0;
         transform: translate(0, 0);
     }
     45%, 55% {
+        opacity: 100%;
         bottom: 100%;
         transform: translate(0, -100%);
     }
   }
 
   @keyframes slide-botton{
-
+   
    0%, 45%, 55% {
-       
+    opacity: 2%;
         transform: translate(0, -20%);
     }
     100%{
+        opacity: 100%;
         transform: translate(0, 0);
     }
   }
+
+  @keyframes slide-nav{
+   
+    0%, 45%, 55% {
+         transform: translate(0, -20%);
+     }
+     100%{
+         opacity: 100%;
+         transform: translate(0, 0);
+     }
+   }
 
   @keyframes slide-certfications{
 

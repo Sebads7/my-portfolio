@@ -1,13 +1,16 @@
+
+
 //FIRST GRAY NAV-BAR
 
 .top-bar {
     display: flex;
     align-items: center;
+   
     background-color: var(--color-nav-gray);
     padding: 0.7rem 0;
     width: 100%;
 
-    z-index: 99999999999999;
+    z-index: 999;
     position: relative;
 
     @include respond(phone) {
@@ -26,14 +29,13 @@
         gap: 3rem;
         padding: 0 10rem;
 
-        @include respond(phone); @include respond(tab-port) {
+        @include respond(tab-port) {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             width: 100%;
             padding: 0 5rem;
         }
-
     }
 
     &__row-left,
@@ -71,7 +73,10 @@
 
     box-shadow: rgb(38, 57, 77) 1px 5px 5px -9px;
 
-    @include respond(phone); @include respond(tab-port) {
+ @include respond(tab-port) {
+        height: 5rem;
+    }
+    @include respond(phone) {
         height: 10rem;
     }
 

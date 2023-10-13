@@ -15,7 +15,8 @@ nav a.active {
     transition: all 0.4s ease;
 
     @include respond(phone){
-        animation: 1s slide-botton ease  .1s;
+        transition: all 0.8s ease;
+        animation: 1.2s slide-nav ease  .1s;
         bottom: 0;
     }
 }
@@ -94,13 +95,9 @@ nav a:hover:before{
     }
 
     &__second-txt, &__btn{
-        transform: translateY(400rem);
-        animation: 2.5s slide-Back-In ease forwards 3s;
-
-        &__btn{
-            transform: translateY(400rem);
-            animation: 2.5s slide-Back-In ease forwards 3.5s infinite;
-        }
+        transform: translateY(20rem);
+        animation: 2.5s slide-Back-In ease forwards 2.5s;
+        opacity: 0%;
     }
 
 }
